@@ -151,7 +151,7 @@ keywords:
 1. 通过运行以下命令克隆节点模板存储库：
 
    ```bash
-   git clone https://github.com/paritytech/polkadot-sdk-solochain-template
+   git clone https://github.com/paritytech/polkadot-sdk-solochain-template.git substrate-solo-template-node
    ```
 
    在大多数情况下，您可以克隆 `main` 分支以获取最新的代码。

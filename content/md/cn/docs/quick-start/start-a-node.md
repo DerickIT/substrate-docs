@@ -30,7 +30,7 @@ keywords:
 1. 通过运行以下命令克隆节点模板存储库：
 
    ```sh
-   git clone https://github.com/paritytech/polkadot-sdk-solochain-template
+   git clone https://github.com/paritytech/polkadot-sdk-solochain-template.git
    ```
 
    此命令将克隆 `main` 分支。

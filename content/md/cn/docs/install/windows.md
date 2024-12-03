@@ -155,7 +155,7 @@ Windows Subsystem for Linux (WSL) 使您能够在使用 Windows 操作系统的�
 1. 通过运行以下命令克隆节点模板存储库：
 
    ```bash
-   git clone https://github.com/paritytech/polkadot-sdk-solochain-template
+   git clone https://github.com/paritytech/polkadot-sdk-solochain-template.git
    ```
 
    在大多数情况下，您可以克隆 `main` 分支以获取最新的代码。
@@ -165,7 +165,7 @@ Windows Subsystem for Linux (WSL) 使您能够在使用 Windows 操作系统的�
 1. 通过运行以下命令更改到节点模板目录的根目录：
 
    ```bash
-   cd substrate-solo-template-node
+   cd  polkadot-sdk-solochain-template
    ```
 
    如果您想保存更改并使此分支易于识别，则可以通过运行类似于以下内容的命令来创建一个新分支：
