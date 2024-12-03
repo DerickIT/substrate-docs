@@ -1,0 +1,48 @@
+{
+  "home": "主页",
+  "technology": "技术",
+  "developers": "开发者",
+  "vision": "版本",
+  "ecosystem": "生态",
+
+  "technology.overview": "Overview",
+  "technology.flexible": "Flexible",
+  "technology.open": "Open",
+  "technology.interoperable": "Interoperable",
+  "technology.future-proof": "Future-Proof",
+
+  "developers.home": "主页",
+  "developers.docs": "文档",
+  "developers.rustdocs": "Rust Docs",
+  "developers.smart-contracts": "智能合约",
+  "developers.substrate-connect": "Substrate Connect",
+  "developers.rococo-network": "Rococo Network",
+
+  "vision.substrate-and-polkadot": "Substrate & Polkadot",
+
+  "ecosystem.home": "Home",
+  "ecosystem.projects": "Projects",
+  "ecosystem.substrate-builders-program": "Builders Program",
+  "ecosystem.opportunities": "Opportunities",
+  "ecosystem.resources": "Resources",
+  "ecosystem.connect": "Connect",
+  "ecosystem.square-one": "Square One",
+
+  "ecosystem.opportunities.hackathons": "Hackathons",
+  "ecosystem.opportunities.grants": "Grants",
+
+  "ecosystem.resources.seminar": "Substrate Seminar",
+  "ecosystem.resources.past-seminars": "Past Seminars",
+  "ecosystem.resources.awesome-substrate": "Awesome Substrate",
+  "ecosystem.resources.community-resources": "Community Resources",
+
+  "ecosystem.resources.contact": "Contact",
+  "ecosystem.resources.events": "Events",
+  "ecosystem.resources.newsletter": "Newsletter",
+  "ecosystem.resources.blog": "Blog",
+
+  "legal.privacy": "Privacy Policy",
+  "legal.terms": "Terms of Services",
+
+  "extra.enterprise": "Enterprise"
+}
