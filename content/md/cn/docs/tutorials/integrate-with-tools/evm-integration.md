@@ -4,7 +4,7 @@ description:
 keywords:
 ---
 
-通过使用 Frontier 项目的板条箱并将 EVM 和以太坊模块添加到您的运行时，您可以构建一个基于 Substrate 的区块链，该区块链支持基于以太坊的帐户并允许执行基于 Solidity 的智能合约。
+通过使用 Frontier 项目的crates并将 EVM 和以太坊模块添加到您的运行时，您可以构建一个基于 Substrate 的区块链，该区块链支持基于以太坊的帐户并允许执行基于 Solidity 的智能合约。
 
 以太坊虚拟机 (EVM) 是一台虚拟计算机，它具有使以太坊网络参与者能够存储数据并就数据状态达成一致的组件。
 对于基于 Substrate 的区块链，EVM 的核心职责在**EVM 模块**中实现。

@@ -83,18 +83,18 @@ Substrate 运行时旨在编译为[WebAssembly (Wasm)](/reference/glossary#webas
 
 ### 核心客户端库
 
-使 Substrate 节点能够处理其网络职责（包括共识和区块执行）的库是 Rust 板条箱，这些板条箱在板条箱名称中使用 `sc_` 前缀。
+使 Substrate 节点能够处理其网络职责（包括共识和区块执行）的库是 Rust crates，这些crates在crates名称中使用 `sc_` 前缀。
 例如，[`sc_service`](https://paritytech.github.io/substrate/master/sc_service/index.html) 库负责为 Substrate 区块链构建网络层，管理网络参与者与交易池之间的通信。
 
 ### 用于运行时的 FRAME 库
 
-使您能够构建运行时逻辑以及对传入和传出运行时的信息进行编码和解码的库是 Rust 板条箱，这些板条箱在板条箱名称中使用 `frame_` 前缀。
+使您能够构建运行时逻辑以及对传入和传出运行时的信息进行编码和解码的库是 Rust crates，这些crates在crates名称中使用 `frame_` 前缀。
 
 `frame_*` 库为运行时提供基础设施。
 例如，[`frame_system`](https://paritytech.github.io/substrate/master/frame_system/index.html) 库提供了一组用于与其他 Substrate 组件交互的基本函数，而[`frame_support`](https://paritytech.github.io/substrate/master/frame_support/index.html) 使您能够声明运行时存储项、错误和事件。
 
 除了 `frame_*` 库提供的基础设施之外，运行时还可以包含一个或多个 `pallet_*` 库。
-每个使用 `pallet_` 前缀的 Rust 板条箱都代表一个单独的 FRAME 模块。
+每个使用 `pallet_` 前缀的 Rust crates都代表一个单独的 FRAME 模块。
 在大多数情况下，您使用 `pallet_*` 库来组装您想要包含在区块链中的功能，以适应您的项目。
 
 您可以使用**原始库**构建 Substrate 运行时，而无需使用 `frame_*` 或 `pallet_*` 库。
@@ -103,7 +103,7 @@ Substrate 运行时旨在编译为[WebAssembly (Wasm)](/reference/glossary#webas
 ### 原始库
 
 在 Substrate 架构的最低级别，存在原始库，这些库使您可以控制底层操作，并使核心客户端服务与运行时之间能够进行通信。
-原始库是 Rust 板条箱，这些板条箱在板条箱名称中使用 `sp_` 前缀。
+原始库是 Rust crates，这些crates在crates名称中使用 `sp_` 前缀。
 
 原始库提供最低级别的抽象来公开核心客户端或运行时可以用来执行操作或相互交互的接口。
 
@@ -117,7 +117,7 @@ Substrate 运行时旨在编译为[WebAssembly (Wasm)](/reference/glossary#webas
 
 核心 Substrate 库的分离为编写区块链逻辑提供了一个灵活且模块化的架构。
 原始库提供了一个基础，核心客户端和运行时都可以构建在该基础之上，而无需直接相互通信。
-原始类型和特性在它们自己的单独板条箱中公开，因此它们可用于外部节点服务和运行时组件，而不会引入循环依赖问题。
+原始类型和特性在它们自己的单独crates中公开，因此它们可用于外部节点服务和运行时组件，而不会引入循环依赖问题。
 
 ## 下一步去哪里
 

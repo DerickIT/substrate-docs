@@ -75,12 +75,12 @@ Nicks 模块允许区块链用户支付押金以预留他们控制的帐户的�
    pallet-nicks = { version = "4.0.0-dev", default-features = false, git = "https://github.com/paritytech/polkadot-sdk.git", branch = "polkadot-v1.0.0" }
    ```
 
-   此行将 `pallet-nicks` 板条箱作为依赖项导入，并指定以下内容：
+   此行将 `pallet-nicks` crates作为依赖项导入，并指定以下内容：
 
-   - 版本，用于标识要导入的板条箱的版本。
+   - 版本，用于标识要导入的crates的版本。
    - 使用标准 Rust 库编译运行时时包含模块功能的默认行为。
-   - 用于检索 `pallet-nicks` 板条箱的存储库位置。
-   - 用于检索板条箱的分支。请确保对 Nicks 模块使用与运行时中包含的其他模块相同的**版本**和**分支**信息。
+   - 用于检索 `pallet-nicks` crates的存储库位置。
+   - 用于检索crates的分支。请确保对 Nicks 模块使用与运行时中包含的其他模块相同的**版本**和**分支**信息。
 
    在节点模板的任何给定版本中，这些详细信息对于每个模块都应该相同。
 

@@ -25,7 +25,7 @@ Substrate 运行时确定哪些交易有效，哪些交易无效，以及如何�
 这些任务经常需要外部节点查询运行时以获取信息或向运行时提供信息。
 运行时 API 促进了外部节点和运行时之间这种通信。
 
-在 Substrate 中，`sp_api` 板条箱提供了一个接口来实现运行时 API。
+在 Substrate 中，`sp_api` crates提供了一个接口来实现运行时 API。
 它旨在让您能够使用[`impl_runtime_apis`](https://paritytech.github.io/substrate/master/sp_api/macro.impl_runtime_apis.html)
 宏来灵活地定义自己的自定义接口。
 但是，每个运行时都必须实现[`Core`](https://paritytech.github.io/substrate/master/sp_api/trait.Core.html) 和[`Metadata`](https://paritytech.github.io/substrate/master/sp_api/trait.Metadata.html) 接口。
@@ -81,9 +81,9 @@ Substrate 框架对运行时必须提供给 Substrate 的其他层的內容做�
 
 除了模块之外，FRAME 还通过以下库和模块提供服务来与运行时进行交互
 
-- [FRAME 系统板条箱 `frame_system`](https://paritytech.github.io/substrate/master/frame_system/index.html) 为运行时提供低级类型、存储和函数。
+- [FRAME 系统crates `frame_system`](https://paritytech.github.io/substrate/master/frame_system/index.html) 为运行时提供低级类型、存储和函数。
 
-- [FRAME 支持板条箱 `frame_support`](https://paritytech.github.io/substrate/master/frame_support/index.html) 是一个 Rust 宏、类型、特性和模块的集合，简化了 Substrate 模块的开发。
+- [FRAME 支持crates `frame_support`](https://paritytech.github.io/substrate/master/frame_support/index.html) 是一个 Rust 宏、类型、特性和模块的集合，简化了 Substrate 模块的开发。
 
 - [FRAME 执行模块 `frame_executive`](https://paritytech.github.io/substrate/master/frame_executive/index.html) 协调传入函数调用到运行时中相应
   模块的执行。

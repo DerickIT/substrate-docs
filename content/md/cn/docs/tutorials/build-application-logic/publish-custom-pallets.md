@@ -1,6 +1,6 @@
 ---
 title: 发布自定义模块
-description: 建议如何发布自定义模块和板条箱，以使它们可供更广泛的社区使用。
+description: 建议如何发布自定义模块和crates，以使它们可供更广泛的社区使用。
 keywords:
 ---
 

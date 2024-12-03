@@ -7,7 +7,7 @@ keywords:
 <!-- TODO Manage expectations about build times on lower-spec hardware. Define that practical dev environment requirements are higher than just for running a node  -->
 
 Rust 是一种现代的、类型安全的、高性能的编程语言，它为构建复杂系统提供了丰富的功能集。
-该语言还拥有活跃的开发人员社区和不断增长的可共享库（称为 **板条箱**）生态系统。
+该语言还拥有活跃的开发人员社区和不断增长的可共享库（称为 **crates**）生态系统。
 
 ## 学习 Rust
 

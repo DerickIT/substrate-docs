@@ -13,7 +13,7 @@ keywords:
   - ganache
 ---
 
-本教程说明了如何使用来自[Frontier](https://github.com/paritytech/frontier)项目的板条箱来构建**与以太坊兼容的**区块链，该区块链可以访问基于以太坊的帐户并执行基于 Solidity 的智能合约。Frontier 项目的两个主要目标是使您能够执行以下操作：
+本教程说明了如何使用来自[Frontier](https://github.com/paritytech/frontier)项目的crates来构建**与以太坊兼容的**区块链，该区块链可以访问基于以太坊的帐户并执行基于 Solidity 的智能合约。Frontier 项目的两个主要目标是使您能够执行以下操作：
 
 - 使用本地 Substrate 节点无修改地运行以太坊去中心化应用程序。
 - 从以太坊主网导入状态。
@@ -22,7 +22,7 @@ keywords:
 该模板是使用[Frontier 发行指南](https://github.com/paritytech/frontier/blob/master/docs/node-template-release.md)中的说明生成的。
 
 如果您想自己生成独立模板，则可以使用[node-template-release.sh](https://github.com/paritytech/frontier/blob/master/.maintain/node-template-release.sh)模板生成脚本。
-如果您使用[frontier](https://github.com/paritytech/frontier)存储库或模板生成脚本构建自己的节点，请注意 Frontier 使用其自身的 Substrate 板条箱版本，您可能需要更新`Cargo`文件中的依赖项以匹配项目中的依赖项。
+如果您使用[frontier](https://github.com/paritytech/frontier)存储库或模板生成脚本构建自己的节点，请注意 Frontier 使用其自身的 Substrate crates版本，您可能需要更新`Cargo`文件中的依赖项以匹配项目中的依赖项。
 
 ## 开始之前
 

@@ -127,19 +127,19 @@ keywords:
 
 1. 在文本编辑器中打开`runtime/Cargo.toml`配置文件。
 
-1. 找到`[dependencies]`部分，并添加`pallet-node-authorization`板条箱以使其可用于节点模板运行时。
+1. 找到`[dependencies]`部分，并添加`pallet-node-authorization`crates以使其可用于节点模板运行时。
 
    ```toml
    [dependencies]
    pallet-node-authorization = { default-features = false, version = "4.0.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v1.0.0" }
    ```
 
-   此行将`pallet-node-authorization`板条箱作为依赖项导入，并为该板条箱指定以下配置详细信息：
+   此行将`pallet-node-authorization`crates作为依赖项导入，并为该crates指定以下配置详细信息：
 
    - 默认情况下，编译运行时时不会启用模块功能。
-   - 板条箱的版本标识符。
-   - 用于检索`pallet-node-authorization`板条箱的存储库位置。
-   - 用于检索板条箱的分支。
+   - crates的版本标识符。
+   - 用于检索`pallet-node-authorization`crates的存储库位置。
+   - 用于检索crates的分支。
 
    请注意，您应该为所有模块使用相同的分支和版本信息，以确保它们彼此兼容。
    使用来自不同分支的模块可能会导致编译器错误。
