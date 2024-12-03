@@ -87,7 +87,7 @@ GRANDPA 在其投票机制中使用最长链规则。
 
 ## 默认共识模型
 
-尽管您可以实现自己的共识机制，但[Substrate 节点模板](https://github.com/substrate-developer-hub/substrate-node-template) 默认包含用于区块生成的 Aura 和用于最终确定的 GRANDPA。
+尽管您可以实现自己的共识机制，但[Substrate 节点模板](https://github.com/paritytech/polkadot-sdk-solochain-template) 默认包含用于区块生成的 Aura 和用于最终确定的 GRANDPA。
 Substrate 还提供了 BABE 和工作量证明共识模型的实现。
 
 ### Aura

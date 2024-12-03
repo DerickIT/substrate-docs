@@ -58,7 +58,7 @@ Aura 共识协议将区块生产限制在一个轮流的授权账户列表中。
 
 有几种方法可以生成密钥。
 
-例如,您可以使用 `node-template` 子命令、独立的 [subkey](/reference/command-line-tools/subkey/) 命令行程序、Polkadot-JS 应用程序或第三方密钥生成实用程序生成密钥对。
+例如,您可以使用 `solo-template-node` 子命令、独立的 [subkey](/reference/command-line-tools/subkey/) 命令行程序、Polkadot-JS 应用程序或第三方密钥生成实用程序生成密钥对。
 
 虽然您可以使用预定义的密钥对来完成本教程,但在生产环境中绝不会使用这些密钥。
 
@@ -70,7 +70,7 @@ Aura 共识协议将区块生产限制在一个轮流的授权账户列表中。
 
 至少,在生成任何您打算在不受您控制的公共或私有区块链上使用的密钥之前,您应该断开互联网连接。
 
-但是,对于本教程,您可以使用 `node-template` 命令行选项在本地生成随机密钥,同时保持与互联网的连接。
+但是,对于本教程,您可以使用 `solo-template-node` 命令行选项在本地生成随机密钥,同时保持与互联网的连接。
 
 要使用节点模板生成密钥:
 
@@ -81,7 +81,7 @@ Aura 共识协议将区块生产限制在一个轮流的授权账户列表中。
 3. 通过运行以下命令生成随机助记词和密钥:
 
 ```bash
-./target/release/node-template key generate --scheme Sr25519 --password-interactive
+./target/release/solo-template-node key generate --scheme Sr25519 --password-interactive
 ```
 
 4. 为生成的密钥输入密码。
@@ -106,7 +106,7 @@ SS58 Address: 5CfBuoHDvZ4fd8jkLQicNL8tgjnK8pVG9AiuJrsNrRAx6CNW
 例如,运行类似以下的命令:
 
 ```bash
-./target/release/node-template key inspect --password-interactive --scheme Ed25519 "pig giraffe ceiling enter weird liar orange decline behind total despair fly"
+./target/release/solo-template-node key inspect --password-interactive --scheme Ed25519 "pig giraffe ceiling enter weird liar orange decline behind total despair fly"
 ```
 
 6. 输入您用于生成密钥的密码。
@@ -171,7 +171,7 @@ SS58 Address: 5CuqCGfwqhjGzSqz5mnq36tMe651mU9Ji8xQ4JRuUTvPcjVN
 3. 通过运行以下命令将 `local` 链规范导出到名为 `customSpec.json` 的文件:
 
 ```bash
-./target/release/node-template build-spec --disable-default-bootnode --chain local > customSpec.json
+./target/release/solo-template-node build-spec --disable-default-bootnode --chain local > customSpec.json
 ```
 
 如果您在文本编辑器中打开 `customSpec.json` 文件,您会看到它包含几个字段。其中一个字段是您使用 `cargo build --release` 命令构建的运行时的 WebAssembly (Wasm) 二进制文件。
@@ -286,7 +286,7 @@ tail -n 80 customSpec.json
 1. 在终端 shell 中,运行以下命令:
 
 ```bash
-./target/release/node-template build-spec --chain=customSpec.json --raw --disable-default-bootnode > customSpecRaw.json
+./target/release/solo-template-node build-spec --chain=customSpec.json --raw --disable-default-bootnode > customSpecRaw.json
 ```
 
 2. 验证 `customSpecRaw.json` 文件是否已创建。
@@ -300,7 +300,7 @@ tail -n 80 customSpec.json
 1. 在终端 shell 中,运行以下命令:
 
 ```bash
-./target/release/node-template \
+./target/release/solo-template-node \
 --base-path /tmp/node01 \
 --chain ./customSpecRaw.json \
 --port 30333 \
@@ -351,7 +351,7 @@ Local node identity is: 12D3KooWLmrYDLoNTyTYtRdDyZLWDe1paxzxTw5RgjmHLfzW96SX
 3. 运行以下命令以启动第二个节点并连接到第一个节点:
 
 ```bash
-./target/release/node-template \
+./target/release/solo-template-node \
 --base-path /tmp/node02 \
 --chain ./customSpecRaw.json \
 --port 30334 \
@@ -412,4 +412,4 @@ Local node identity is: 12D3KooWLmrYDLoNTyTYtRdDyZLWDe1paxzxTw5RgjmHLfzW96SX
 
 - [账户、地址和密钥](/learn/accounts-addresses-keys/)
 - [共识](/learn/consensus/)
-- [节点模板命令行参考](/reference/command-line-tools/node-template/)
+- [节点模板命令行参考](/reference/command-line-tools/solo-template-node/)

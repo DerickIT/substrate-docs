@@ -91,7 +91,7 @@ pub fn cause_error(origin) -> dispatch::DispatchResult {
 使用 RUST_LOG 环境变量运行节点二进制文件以打印值。
 
 ```sh
-RUST_LOG=runtime=debug ./target/release/node-template --dev
+RUST_LOG=runtime=debug ./target/release/solo-template-node --dev
 ```
 
 每次调用运行时函数时，都会在终端或标准输出中打印这些值。
@@ -134,7 +134,7 @@ pub fn do_something(origin) -> DispatchResult {
 使用 `RUST_LOG` 环境变量启动链以查看打印日志。
 
 ```sh
-RUST_LOG=runtime=debug ./target/release/node-template --dev
+RUST_LOG=runtime=debug ./target/release/solo-template-node --dev
 ```
 
 如果触发错误，则会在终端或标准输出中打印这些值。

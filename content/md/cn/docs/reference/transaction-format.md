@@ -88,7 +88,7 @@ Substrate 以通用的方式定义其交易格式，以允许开发人员实现�
 
 在这里，我们演示了从 Bob 到 Dave 的余额转移的详细的手动外部函数构建和提交：Bob 向 Dave 发送 `42 UNIT`。
 
-1. 在 `--dev` 模式下启动 [节点模板](https://github.com/substrate-developer-hub/substrate-node-template)（请参阅 [快速入门](/quick-start) 指南，了解如何设置此项）
+1. 在 `--dev` 模式下启动 [节点模板](https://github.com/paritytech/polkadot-sdk-solochain-template)（请参阅 [快速入门](/quick-start) 指南，了解如何设置此项）
 1. 导航到 <https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A9944#/extrinsics>
 1. 将 `Bob` 设置为发送者，并选择 `balances` pallet 和 `transfer(dest, value)` 调用
 1. 将 `MultiAddress` 设置为 `Id`，并将 `AccountID` 设置为 `Dave`（用于 `dest`）

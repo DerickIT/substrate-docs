@@ -12,7 +12,7 @@ tutorial:
 
 1. 根据需要打开新的终端。
 
-2. 更改到工作区中包含`workshop-node-template`目录的目录。
+2. 更改到工作区中包含`workshop-solo-template-node`目录的目录。
 
 3. 查看节点工作区的`Cargo.toml`文件的内容。
 
@@ -119,7 +119,7 @@ tutorial:
 1. 通过运行以下命令启动区块链节点：
 
    ```bash
-   ./target/release/node-template --dev
+   ./target/release/solo-template-node --dev
    ```
 
 2. 打开[Polkadot/Substrate 门户](https://polkadot.js.org/apps/#/explorer)并连接到您的本地**开发**节点。

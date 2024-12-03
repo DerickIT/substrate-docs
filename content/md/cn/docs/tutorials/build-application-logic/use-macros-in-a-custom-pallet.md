@@ -35,7 +35,7 @@ keywords:
 
 - 您已通过安装 [Rust 和 Rust 工具链](/install/) 为 Substrate 开发配置了您的环境。
 
-- 您已克隆了[Substrate 节点模板](https://github.com/substrate-developer-hub/substrate-node-template)，它将用作本教程的起点。
+- 您已克隆了[Substrate 节点模板](https://github.com/paritytech/polkadot-sdk-solochain-template)，它将用作本教程的起点。
 
 ## 教程目标
 
@@ -320,7 +320,7 @@ Substrate 为您提供了许多预构建的模块，可在基于 FRAME 的运行
 
    `-p`标志告诉 cargo 只检查您一直在修改的文件，从而节省一些编译时间。
 
-   如果您遇到问题，可以参考节点模板的[解决方案](https://github.com/substrate-developer-hub/substrate-node-template/blob/tutorials/solutions/proof-of-existence/pallets/template/src/lib.rs)。
+   如果您遇到问题，可以参考节点模板的[解决方案](https://github.com/paritytech/polkadot-sdk-solochain-template/blob/tutorials/solutions/proof-of-existence/pallets/template/src/lib.rs)。
 
 ## 使用新模块构建运行时
 
@@ -341,7 +341,7 @@ Substrate 为您提供了许多预构建的模块，可在基于 FRAME 的运行
 1. 通过运行以下命令以开发模式启动节点：
 
    ```bash
-   ./target/release/node-template --dev
+   ./target/release/solo-template-node --dev
    ```
 
    `--dev`选项使用预定义的`development`链规范启动节点。

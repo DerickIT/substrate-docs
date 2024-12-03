@@ -42,6 +42,6 @@ keywords:
 ## 下一步去哪里
 
 - [命令行工具](/reference/command-line-tools/)
-- [node-template](/reference/command-line-tools/node-template/)
+- [solo-template-node](/reference/command-line-tools/solo-template-node/)
 - [subkey](/reference/command-line-tools/subkey/)
 - [try-runtime](/reference/command-line-tools/try-runtime/)

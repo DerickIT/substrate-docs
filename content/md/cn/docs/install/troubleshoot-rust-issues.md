@@ -8,7 +8,7 @@ keywords:
   - rustup
 ---
 
-如果编译 [Substrate 节点模板](https://github.com/substrate-developer-hub/substrate-node-template) 失败，则问题很可能是由开发环境中 Rust 的配置引起的。
+如果编译 [Substrate 节点模板](https://github.com/paritytech/polkadot-sdk-solochain-template) 失败，则问题很可能是由开发环境中 Rust 的配置引起的。
 本节建议如何诊断和修复配置问题。
 
 ## 检查当前配置

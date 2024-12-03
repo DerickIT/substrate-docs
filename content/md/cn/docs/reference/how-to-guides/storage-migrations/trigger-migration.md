@@ -44,7 +44,7 @@ keywords:
 ## 上传运行时
 
 使用 `cargo build --release` 重新编译您的运行时，这将生成更适合提交到区块链网络的较小构建工件。
-WebAssembly 构建工件位于 target/release/wbuild/node-template-runtime 目录中。例如，您应该看到以下 WebAssembly 工件：
+WebAssembly 构建工件位于 target/release/wbuild/solo-template-node-runtime 目录中。例如，您应该看到以下 WebAssembly 工件：
 ```
     node_template_runtime.compact.compressed.wasm
     node_template_runtime.compact.wasm
@@ -54,7 +54,7 @@ WebAssembly 构建工件位于 target/release/wbuild/node-template-runtime 目�
 
 转到 `开发者 > 外部函数`，使用管理帐户，选择 `sudo` pallet 和 `sudoUncheckedWeight(call, weight)` 函数。
 选择 `system` 和 `setCode(code)` 作为要进行的调用
-点击文件上传，然后选择或拖放您为更新的运行时生成的紧凑型和压缩型 WebAssembly 文件（`node_template_runtime.compact.compressed.wasm`）（例如，`./target/release/wbuild/node-template-runtime/node_template_runtime.compact.wasm`）。
+点击文件上传，然后选择或拖放您为更新的运行时生成的紧凑型和压缩型 WebAssembly 文件（`node_template_runtime.compact.compressed.wasm`）（例如，`./target/release/wbuild/solo-template-node-runtime/node_template_runtime.compact.wasm`）。
 
 提交事务，并在事务包含在区块中后，您将能够看到节点模板版本号指示运行时版本现在为 101。
 

@@ -76,7 +76,7 @@ include!(concat!(env!("OUT_DIR"), "/wasm_binary.rs"));
 ## 执行策略
 
 编译包含原生和 WebAssembly 运行时的节点后，可以使用命令行选项来指定节点的运行方式。
-有关可用于启动节点的命令行选项的详细信息，请参阅 [node-template](/reference/command-line-tools/node-template) 命令行参考。
+有关可用于启动节点的命令行选项的详细信息，请参阅 [solo-template-node](/reference/command-line-tools/solo-template-node) 命令行参考。
 
 启动节点时，节点可执行文件使用你指定的命令行选项来初始化链并生成创世块。
 在此过程中，节点会将 WebAssembly 运行时添加为存储项值和相应的 `:code` 密钥。
@@ -117,7 +117,7 @@ WebAssembly 执行环境可能比 Rust 执行环境更严格。
 例如，你可能希望将原生运行时用于初始同步。
 要将原生运行时用于同步块，可以使用 `--execution-syncing native` 或 `--execution-syncing native-else-wasm` 命令行选项启动节点。
 
-有关使用命令行选项为所有操作或特定操作指定执行策略的信息，请参阅 [node-template](/reference/command-line-tools/node-template)。
+有关使用命令行选项为所有操作或特定操作指定执行策略的信息，请参阅 [solo-template-node](/reference/command-line-tools/solo-template-node)。
 有关执行策略变体的更多信息，请参阅 [ExecutionStrategy](https://paritytech.github.io/substrate/master/sc_cli/arg_enums/enum.ExecutionStrategy.html)
 
 ## 在没有原生运行时的情况下构建 WebAssembly

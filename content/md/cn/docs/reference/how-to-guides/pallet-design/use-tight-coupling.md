@@ -18,7 +18,7 @@ keywords:
 ## 开始之前
 
 本指南假设您有一个模块，您想将另一个模块与其耦合。
-如果您还没有要使用的模块，请使用 [模板模块](https://github.com/substrate-developer-hub/substrate-node-template/blob/main/pallets/template/src/lib.rs)。
+如果您还没有要使用的模块，请使用 [模板模块](https://github.com/paritytech/polkadot-sdk-solochain-template/blob/main/pallets/template/src/lib.rs)。
 
 1. 配置您的工作区
 

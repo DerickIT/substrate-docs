@@ -75,6 +75,6 @@ Rust 编译器最大限度地减少了错误进入代码的可能性，并生成
 ## 节点模板
 
 要完成本研讨会，您必须能够访问 Substrate 节点。
-如果您正在设置本地开发环境，则可以按照[快速入门](/quickstart/)中的说明下载和编译开发者中心的[substrate-node-template](https://github.com/substrate-developer-hub/substrate-node-template/tags/)。
+如果您正在设置本地开发环境，则可以按照[快速入门](/quickstart/)中的说明下载和编译开发者中心的[substrate-solo-template-node](https://github.com/paritytech/polkadot-sdk-solochain-template/tags/)。
 
-`substrate-node-template`存储库提供的是主 Substrate `node-template`二进制文件的快照，其中包含开始使用功能性节点和核心功能集所需的一切。
+`substrate-solo-template-node`存储库提供的是主 Substrate `solo-template-node`二进制文件的快照，其中包含开始使用功能性节点和核心功能集所需的一切。

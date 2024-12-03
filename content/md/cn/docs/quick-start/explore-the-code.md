@@ -5,7 +5,7 @@ keywords:
 ---
 
 在 [启动节点](/quick-start/start-a-node/) 中，您在开发模式下编译并启动了本地 Substrate 节点。
-此特定节点（`substrate-node-template`）提供了一个简化的环境，其中只有几个常用模块可帮助您入门。
+此特定节点（`substrate-solo-template-node`）提供了一个简化的环境，其中只有几个常用模块可帮助您入门。
 无需深入了解细节，从探索节点模板代码的基本构建块中，您可以学到很多东西。
 
 ## 关于节点模板
@@ -22,12 +22,12 @@ keywords:
 
 节点模板还提供了一个入门 `pallet_template`，它说明了如何在自定义pallet中实现功能。
 
-现在您已经概述了节点模板中包含的功能，让我们更仔细地查看 `substrate-node-template` 目录及其子目录中的代码。
+现在您已经概述了节点模板中包含的功能，让我们更仔细地查看 `substrate-solo-template-node` 目录及其子目录中的代码。
 
 ## 清单文件
 
 由于 Substrate 是一个基于 Rust 的框架，因此每个包都有一个清单文件（`Cargo.toml` 文件），其中包含编译包所需的信息。
-如果您打开位于 `substrate-node-template` 根目录中的 `Cargo.toml` 文件，您会发现它描述了构成节点模板工作区的成员包。
+如果您打开位于 `substrate-solo-template-node` 根目录中的 `Cargo.toml` 文件，您会发现它描述了构成节点模板工作区的成员包。
 例如：
 
 ```toml
@@ -48,7 +48,7 @@ panic = "unwind"
 - `runtime` 包为处理帐户、余额、交易费用以及已包含在节点模板中的其他功能提供所有应用程序逻辑。
 
 每个成员包也有自己的清单（自己的 `Cargo.toml` 文件），其中包含特定于包的信息，包括依赖项和配置设置，这些信息是编译该成员包所必需的。
-例如，工作区 `node` 成员的 `Cargo.toml` 文件将包的名称指定为 `node-template`，并列出了使节点模板能够提供基本区块链服务的核心库和基元。
+例如，工作区 `node` 成员的 `Cargo.toml` 文件将包的名称指定为 `solo-template-node`，并列出了使节点模板能够提供基本区块链服务的核心库和基元。
 您将在 [架构和 Rust 库](/learn/architecture) 中详细了解库和基元。
 现在，了解清单在描述每个包的依赖项和其他关键信息方面的重要性就足够了。
 

@@ -18,7 +18,7 @@ keywords:
 
 您需要在运行时中已经集成了一个模块才能遵循本指南。
 本指南假设您正在使用包含 [Balances 模块](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/balances) 的运行时来处理链的帐户和余额。
-您可以使用 [节点模板](https://github.com/substrate-developer-hub/substrate-node-template) 中的模板模块来遵循。
+您可以使用 [节点模板](https://github.com/paritytech/polkadot-sdk-solochain-template) 中的模板模块来遵循。
 
 ## 声明必要的依赖项
 

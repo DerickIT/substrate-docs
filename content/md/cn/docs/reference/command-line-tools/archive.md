@@ -54,7 +54,7 @@ keywords:
    例如：
 
    ```
-   ./target/release/node-template --pruning=archive
+   ./target/release/solo-template-node --pruning=archive
    ```
 
 2. 查看当前的数据库：

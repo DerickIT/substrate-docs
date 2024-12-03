@@ -35,7 +35,7 @@ keywords:
 ## 构建平行链模板
 
 本教程使用[Substrate 平行链模板](https://github.com/substrate-developer-hub/substrate-parachain-template)来说明如何启动连接到本地中继链的平行链。
-平行链模板类似于在单链开发中使用的[节点模板](https://github.com/substrate-developer-hub/substrate-node-template)。
+平行链模板类似于在单链开发中使用的[节点模板](https://github.com/paritytech/polkadot-sdk-solochain-template)。
 您还可以使用平行链模板作为开发自定义平行链项目的起点。
 
 要构建平行链模板：

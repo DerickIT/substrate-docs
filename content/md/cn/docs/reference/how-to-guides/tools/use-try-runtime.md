@@ -121,7 +121,7 @@ keywords:
 	 [features]
 	 ...
 	 cli = [ "try-runtime-cli" ]
-	 try-runtime = [ "node-template-runtime/try-runtime", "try-runtime-cli" ]
+	 try-runtime = [ "solo-template-node-runtime/try-runtime", "try-runtime-cli" ]
 	 ...
 	 ```
 

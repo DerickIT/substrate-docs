@@ -17,7 +17,7 @@ keywords:
 
 在 `pallet-testing/src` 内部，我们需要做的第一件事是创建两个空文件：`mock.rs` 和 `tests.rs`。
 
-粘贴 [`template/src/mock.rs`](https://github.com/substrate-developer-hub/substrate-node-template/blob/main/pallets/template/src/mock.rs) 中的内容。
+粘贴 [`template/src/mock.rs`](https://github.com/paritytech/polkadot-sdk-solochain-template/blob/main/pallets/template/src/mock.rs) 中的内容。
 我们将使用它作为我们将为 `pallet-testing` pallet 定制的样板。
 
 ## 创建模拟运行时以测试您的 pallet
@@ -114,7 +114,7 @@ cargo test
 
 ## 示例
 
-- [`pallet_template`](https://github.com/substrate-developer-hub/substrate-node-template/blob/master/pallets/template/src/tests.rs#L1-L23) 中的测试
+- [`pallet_template`](https://github.com/paritytech/polkadot-sdk-solochain-template/blob/master/pallets/template/src/tests.rs#L1-L23) 中的测试
 - [`reward-coin`](https://github.com/substrate-developer-hub/substrate-how-to-guides/blob/main/example-code/template-node/pallets/reward-coin/src/tests.rs) 示例 pallet 中的测试
 
 ## 相关资料

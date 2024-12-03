@@ -177,8 +177,8 @@ keywords:
    ```text
    #[sp_version::runtime_version]
    pub const VERSION: RuntimeVersion = RuntimeVersion {
-        spec_name: create_runtime_str!("node-template"),
-        impl_name: create_runtime_str!("node-template"),
+        spec_name: create_runtime_str!("solo-template-node"),
+        impl_name: create_runtime_str!("solo-template-node"),
         authoring_version: 1,
         spec_version: 100,
         impl_version: 1,
@@ -212,15 +212,15 @@ keywords:
 2. 通过运行以下命令重新编译运行时：
 
    ```shell
-   cargo build --release --package node-template-runtime
+   cargo build --release --package solo-template-node-runtime
    ```
 
    `--release` 命令行选项需要更长的编译时间。
    但是，它会生成一个更适合提交到区块链网络的较小构建工件。
    存储优化对于任何区块链都至关重要。
    使用此命令，构建工件将输出到 `target/release` 目录。
-   WebAssembly 构建工件位于 `target/release/wbuild/node-template-runtime` 目录中。
-   例如，如果您列出 `target/release/wbuild/node-template-runtime` 目录的内容，您应该看到以下 WebAssembly 工件：
+   WebAssembly 构建工件位于 `target/release/wbuild/solo-template-node-runtime` 目录中。
+   例如，如果您列出 `target/release/wbuild/solo-template-node-runtime` 目录的内容，您应该看到以下 WebAssembly 工件：
 
    ```text
    node_template_runtime.compact.compressed.wasm
@@ -245,7 +245,7 @@ keywords:
 
 5. 单击**文件上传**，然后选择或拖放您为更新的运行时生成的紧凑压缩 WebAssembly 文件—`node_template_runtime.compact.compressed.wasm`。
 
-   例如，导航到 `target/release/wbuild/node-template-runtime` 目录，然后选择 `node_template_runtime.compact.compressed.wasm` 作为要上传的文件。
+   例如，导航到 `target/release/wbuild/solo-template-node-runtime` 目录，然后选择 `node_template_runtime.compact.compressed.wasm` 作为要上传的文件。
 
 6. 将两个**权重**参数都保留为默认值 `0`。
 

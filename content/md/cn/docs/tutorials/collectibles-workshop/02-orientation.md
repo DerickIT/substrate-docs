@@ -8,7 +8,7 @@ answer: |
 ---
 
 如果您完成了[准备工作环境](/tutorials/collectibles-workshop/01-prepare/)中的清单，则您已成功编译了 Substrate 节点。
-此特定节点（substrate-node-template）预先配置了一些常见的模块，以提供简单的可用环境来帮助您入门。
+此特定节点（substrate-solo-template-node）预先配置了一些常见的模块，以提供简单的可用环境来帮助您入门。
 
 ## 关于节点模板
 
@@ -31,20 +31,20 @@ answer: |
 
 要准备自定义工作区：
 
-1. 在本地计算机上打开终端，然后导航到包含`substrate-node-template`根目录的目录。
+1. 在本地计算机上打开终端，然后导航到包含`substrate-solo-template-node`根目录的目录。
 
-2. 通过运行以下命令重命名`substrate-node-template`根目录：
+2. 通过运行以下命令重命名`substrate-solo-template-node`根目录：
 
    ```bash
-   mv substrate-node-template workshop-node-template
+   mv substrate-solo-template-node workshop-solo-template-node
    ```
 
-   在后续步骤中，`workshop-node-template`目录用于指代节点的根目录。
+   在后续步骤中，`workshop-solo-template-node`目录用于指代节点的根目录。
 
 3. 通过运行以下命令更改到节点的根目录：
 
    ```bash
-   cd workshop-node-template
+   cd workshop-solo-template-node
    ```
 
 4. 通过运行类似于以下命令的命令为您的工作区创建一个自定义分支：
@@ -77,12 +77,12 @@ answer: |
 
 1. 根据需要打开终端 shell。
 
-2. 更改到`workshop-node-template`根目录。
+2. 更改到`workshop-solo-template-node`根目录。
 
 3. 通过运行以下命令以开发模式启动节点：
 
    ```bash
-   ./target/release/node-template --dev
+   ./target/release/solo-template-node --dev
    ```
 
    在开发模式下，链不需要任何对等计算机来完成区块。
@@ -107,7 +107,7 @@ answer: |
    您可以随时将其保留在后台运行，或者停止并重新启动它。
 
    - 要停止节点，请按 Control-c。
-   - 要重新启动节点，请运行`./target/release/node-template --dev`。
+   - 要重新启动节点，请运行`./target/release/solo-template-node --dev`。
 
    下一步是开始自定义此区块链的功能。
 

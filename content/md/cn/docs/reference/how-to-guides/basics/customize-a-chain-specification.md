@@ -22,7 +22,7 @@ keywords:
 1. 在节点的工作目录中启动，使用以下命令生成纯链规范：
 
    ```bash
-   ./target/release/node-template build-spec > chain-spec-plain.json
+   ./target/release/solo-template-node build-spec > chain-spec-plain.json
    ```
 
    我们刚刚为 `chain_spec.rs` 文件中设置的默认网络生成了一个 **纯链规范** 文件。
@@ -36,7 +36,7 @@ keywords:
    这里我们使用 _相同的_ 链规范，但传递一个标志来禁用引导节点，因为我们想要一个 _新的_ 网络，其中这些节点将不同。
 
    ```bash
-   ./target/release/node-template build-spec --chain chain-spec-plain.json --raw --disable-default-bootnode > no-bootnodes-chain-spec-plain.json
+   ./target/release/solo-template-node build-spec --chain chain-spec-plain.json --raw --disable-default-bootnode > no-bootnodes-chain-spec-plain.json
    ```
 
    此 `no-bootnodes-chain-spec-plain.json` 可用于生成 SCALE 存储编码的可分发原始链规范。
@@ -48,7 +48,7 @@ keywords:
    有了纯规范，您可以通过运行以下命令生成最终的原始链规范：
 
    ```bash
-   ./target/release/node-template build-spec --chain chain-spec-plain.json --raw > chain-spec.json
+   ./target/release/solo-template-node build-spec --chain chain-spec-plain.json --raw > chain-spec.json
    ```
 
 原始链规范应始终在传递到节点以使用它时使用。
@@ -66,9 +66,9 @@ Polkadot、Kusama、Rococo 以及更多网络链规范文件都可以在 [源代
 如果您发布了一个节点二进制文件，或者让用户构建自己的节点，然后他们希望加入您的网络，那么他们只需要 _相同的_ 原始链规范文件，并使用以下命令运行您的二进制文件：
 
 ```bash
-# 二进制文件名为 `node-template`
+# 二进制文件名为 `solo-template-node`
 # `chain-spec.json` 从规范的公共源获取
-node-template --chain chain-spec.json
+solo-template-node --chain chain-spec.json
 ```
 
 这也可以简单地配置为默认网络。

@@ -93,7 +93,7 @@ Substrate 运行时工具箱 (`srtool`) 的核心组件是一个 Docker 容器�
 2. 通过运行类似于以下命令的命令来为项目编译运行时：
 
    ```bash
-   srtool build --app --package node-template-runtime --runtime-dir runtime
+   srtool build --app --package solo-template-node-runtime --runtime-dir runtime
    ```
 
    - 你为 `--package` 指定的名称应该是 `Cargo.toml` 文件中为运行时定义的名称。

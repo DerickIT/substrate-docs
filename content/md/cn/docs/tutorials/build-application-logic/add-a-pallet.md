@@ -10,7 +10,7 @@ keywords:
   - 配置
 ---
 
-正如您在[构建本地区块链](/tutorials/build-a-blockchain/build-local-blockchain/)中看到的那样，[Substrate 节点模板](https://github.com/substrate-developer-hub/substrate-node-template)提供了一个可工作的**运行时**，其中包含一些默认的 FRAME 开发模块（**模块**），可帮助您开始构建自定义区块链。
+正如您在[构建本地区块链](/tutorials/build-a-blockchain/build-local-blockchain/)中看到的那样，[Substrate 节点模板](https://github.com/paritytech/polkadot-sdk-solochain-template)提供了一个可工作的**运行时**，其中包含一些默认的 FRAME 开发模块（**模块**），可帮助您开始构建自定义区块链。
 
 本教程介绍了向节点模板的运行时添加新模块的基本步骤。
 无论何时要向运行时添加新的 FRAME 模块，步骤都类似。
@@ -107,7 +107,7 @@ Nicks 模块允许区块链用户支付押金以预留他们控制的帐户的�
 2. 通过运行以下命令检查新依赖项是否正确解析：
 
    ```bash
-   cargo check -p node-template-runtime --release
+   cargo check -p solo-template-node-runtime --release
    ```
 
 ## 查看 Balances 的配置
@@ -235,7 +235,7 @@ pub trait Config: Config {
 2. 通过运行以下命令检查新依赖项是否正确解析：
 
    ```bash
-   cargo check -p node-template-runtime --release
+   cargo check -p solo-template-node-runtime --release
    ```
 
    如果没有错误，则可以准备编译。
@@ -259,7 +259,7 @@ pub trait Config: Config {
 1. 通过运行以下命令以开发模式启动节点：
 
    ```bash
-   ./target/release/node-template --dev
+   ./target/release/solo-template-node --dev
    ```
 
    在本例中，`--dev`选项指定节点使用预定义的`development`链规范在开发模式下运行。

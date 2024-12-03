@@ -86,7 +86,7 @@ keywords:
 1. 必要时，通过运行以下命令更改到节点模板目录的根目录：
 
    ```bash
-   cd substrate-node-template
+   cd substrate-solo-template-node
    ```
 
 2. 如果要通过运行类似于以下命令的命令来保存更改，请切换到存储库的工作分支：
@@ -166,7 +166,7 @@ keywords:
 3. 通过运行以下命令检查新依赖项是否正确解析：
 
    ```bash
-   cargo check -p node-template-runtime --release
+   cargo check -p solo-template-node-runtime --release
    ```
 
 ### 添加管理规则
@@ -242,7 +242,7 @@ Sudo模块默认包含在节点模板中，允许您通过根级管理帐户进�
 1. 通过运行以下命令检查配置是否可以编译：
 
    ```bash
-   cargo check -p node-template-runtime --release
+   cargo check -p solo-template-node-runtime --release
    ```
 
 ### 为授权节点添加创世存储
@@ -320,7 +320,7 @@ Sudo模块默认包含在节点模板中，允许您通过根级管理帐户进�
 
 要编译节点：
 
-1. 必要时更改到`substrate-node-template`目录的根目录：
+1. 必要时更改到`substrate-solo-template-node`目录的根目录：
 
 1. 通过运行以下命令编译节点：
 
@@ -415,7 +415,7 @@ echo -n "3a9d5b35b9fb4c42aafadeca046f6bf56107bd2579687f069b42646684b94d9e" > cha
 1. 通过运行以下命令启动第一个节点：
 
    ```bash
-   ./target/release/node-template \
+   ./target/release/solo-template-node \
    --chain=local \
    --base-path /tmp/validator1 \
    --alice \
@@ -447,7 +447,7 @@ echo -n "3a9d5b35b9fb4c42aafadeca046f6bf56107bd2579687f069b42646684b94d9e" > cha
 1. 通过运行以下命令启动第二个节点：
 
    ```bash
-   ./target/release/node-template \
+   ./target/release/solo-template-node \
    --chain=local \
    --base-path /tmp/validator2 \
    --bob \
@@ -474,7 +474,7 @@ echo -n "3a9d5b35b9fb4c42aafadeca046f6bf56107bd2579687f069b42646684b94d9e" > cha
 1. 通过运行以下命令启动第三个节点：
 
    ```bash
-   ./target/release/node-template \
+   ./target/release/solo-template-node \
    --chain=local \
    --base-path /tmp/validator3 \
    --name charlie  \
@@ -579,7 +579,7 @@ echo -n "3a9d5b35b9fb4c42aafadeca046f6bf56107bd2579687f069b42646684b94d9e" > cha
 1. 通过运行以下命令启动子节点：
 
    ```bash
-   ./target/release/node-template \
+   ./target/release/solo-template-node \
    --chain=local \
    --base-path /tmp/validator4 \
    --name dave \

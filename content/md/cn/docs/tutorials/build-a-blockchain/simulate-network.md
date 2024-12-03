@@ -53,7 +53,7 @@ Substrate 节点模板使用权威共识模型，该模型将区块生成限制�
 1. 通过运行以下命令清除旧的链数据：
 
    ```bash
-   ./target/release/node-template purge-chain --base-path /tmp/alice --chain local
+   ./target/release/solo-template-node purge-chain --base-path /tmp/alice --chain local
    ```
 
    该命令会提示您确认操作：
@@ -69,7 +69,7 @@ Substrate 节点模板使用权威共识模型，该模型将区块生成限制�
 1. 通过运行以下命令使用 `alice` 帐户启动本地区块链节点：
 
    ```bash
-   ./target/release/node-template \
+   ./target/release/solo-template-node \
    --base-path /tmp/alice \
    --chain local \
    --alice \
@@ -97,7 +97,7 @@ Substrate 节点模板使用权威共识模型，该模型将区块生成限制�
 
 有关节点模板可用的命令行选项的更多信息，请通过运行以下命令查看使用帮助：
 
-`./target/release/node-template --help`
+`./target/release/solo-template-node --help`
 
 ### 查看显示的节点消息
 
@@ -112,7 +112,7 @@ Substrate 节点模板使用权威共识模型，该模型将区块生成限制�
 2022-08-16 15:29:55 🏷  Node name: Alice    
 2022-08-16 15:29:55 👤 Role: AUTHORITY    
 2022-08-16 15:29:55 💾 Database: RocksDb at /tmp/alice/chains/local_testnet/db/full    
-2022-08-16 15:29:55 ⛓  Native runtime: node-template-100 (node-template-1.tx1.au1)    
+2022-08-16 15:29:55 ⛓  Native runtime: solo-template-node-100 (solo-template-node-1.tx1.au1)    
 2022-08-16 15:29:55 🔨 Initializing Genesis block/state (state: 0x6894…033d, header-hash: 0x2cdc…a07f)    
 2022-08-16 15:29:55 👴 Loading GRANDPA authority set from genesis on what appears to be first startup.    
 2022-08-16 15:29:56 Using default protocol ID "sup" because none is configured in the chain specs    
@@ -153,7 +153,7 @@ Substrate 节点模板使用权威共识模型，该模型将区块生成限制�
 1. 通过运行以下命令清除旧的链数据：
 
    ```bash
-   ./target/release/node-template purge-chain --base-path /tmp/bob --chain local -y
+   ./target/release/solo-template-node purge-chain --base-path /tmp/bob --chain local -y
    ```
 
    通过向命令添加 `-y`，您可以删除链数据而无需提示您确认操作。
@@ -161,7 +161,7 @@ Substrate 节点模板使用权威共识模型，该模型将区块生成限制�
 1. 通过运行以下命令使用 `bob` 帐户启动第二个本地区块链节点：
 
    ```bash
-   ./target/release/node-template \
+   ./target/release/solo-template-node \
    --base-path /tmp/bob \
    --chain local \
    --bob \

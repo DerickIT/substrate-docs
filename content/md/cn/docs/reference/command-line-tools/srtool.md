@@ -230,10 +230,10 @@ srtool info [选项] --package <package> [--runtime-dir <path>] [项目路径]
 
 ### 示例
 
-要显示有关 `srtool` 容器和本地 node-template 存储库的信息，您可能需要运行类似以下命令：
+要显示有关 `srtool` 容器和本地 solo-template-node 存储库的信息，您可能需要运行类似以下命令：
 
 ```bash
-srtool info --package node-template-runtime --runtime-dir runtime
+srtool info --package solo-template-node-runtime --runtime-dir runtime
 ```
 
 此命令将显示类似以下内容的输出：

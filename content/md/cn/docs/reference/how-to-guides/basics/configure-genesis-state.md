@@ -149,5 +149,5 @@ construct_runtime!(
 
 ## 示例
 
-- [节点模板 'chain_spec.rs'](https://github.com/substrate-developer-hub/substrate-node-template/blob/master/node/src/chain_spec.rs)
+- [节点模板 'chain_spec.rs'](https://github.com/paritytech/polkadot-sdk-solochain-template/blob/master/node/src/chain_spec.rs)
 - [示例模块](https://github.com/paritytech/polkadot-sdk/blob/master/substrate/frame/examples/basic/src/lib.rs)

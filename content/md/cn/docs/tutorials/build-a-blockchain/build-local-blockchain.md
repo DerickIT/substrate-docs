@@ -55,7 +55,7 @@ Substrate 节点模板提供了一个可工作的单节点区块链，您可以�
 
 ## 编译Substrate节点
 
-[Substrate 节点模板](https://github.com/substrate-developer-hub/substrate-node-template)提供了一个可工作的开发环境，以便您可以立即开始在Substrate上构建。
+[Substrate 节点模板](https://github.com/paritytech/polkadot-sdk-solochain-template)提供了一个可工作的开发环境，以便您可以立即开始在Substrate上构建。
 
 如果您已经在本地计算机上编译了节点模板，则可以跳过此部分，继续进行[启动本地节点](#start-the-local-node)。
 
@@ -66,7 +66,7 @@ Substrate 节点模板提供了一个可工作的单节点区块链，您可以�
 1. 通过运行以下命令克隆节点模板存储库：
 
    ```bash
-   git clone https://github.com/substrate-developer-hub/substrate-node-template
+   git clone https://github.com/paritytech/polkadot-sdk-solochain-template
    ```
 
    此命令克隆`main`分支。
@@ -77,7 +77,7 @@ Substrate 节点模板提供了一个可工作的单节点区块链，您可以�
 2. 通过运行以下命令更改到节点模板目录的根目录：
 
    ```bash
-   cd substrate-node-template
+   cd substrate-solo-template-node
    ```
 
    创建一个新分支来包含您的工作：
@@ -116,10 +116,10 @@ Substrate 节点模板提供了一个可工作的单节点区块链，您可以�
 1. 在您编译节点的同一终端中，您现在可以通过运行以下命令以开发模式启动节点：
 
    ```bash
-   ./target/release/node-template --dev
+   ./target/release/solo-template-node --dev
    ```
 
-   `node-template`命令行选项指定您希望运行的节点如何运行。
+   `solo-template-node`命令行选项指定您希望运行的节点如何运行。
    在本例中，`--dev`选项指定节点使用预定义的`development`链规范在开发模式下运行。
    默认情况下，此选项还会在您按Control-c停止节点时删除所有活动数据——例如密钥、区块链数据库和网络信息。
    使用`--dev`选项可确保您在每次停止和重新启动节点时都拥有干净的工作状态。
@@ -136,7 +136,7 @@ Substrate 节点模板提供了一个可工作的单节点区块链，您可以�
    2022-08-16 13:43:58 🏷  Node name: limping-oatmeal-7460    
    2022-08-16 13:43:58 👤 Role: AUTHORITY    
    2022-08-16 13:43:58 💾 Database: RocksDb at /var/folders/2_/g86ns85j5l7fdnl621ptzn500000gn/T/substrate95LPvM/chains/dev/db/full    
-   2022-08-16 13:43:58 ⛓  Native runtime: node-template-100 (node-template-1.tx1.au1)
+   2022-08-16 13:43:58 ⛓  Native runtime: solo-template-node-100 (solo-template-node-1.tx1.au1)
    2022-08-16 13:43:58 🔨 Initializing Genesis block/state (state: 0xf6f5…423f, header-hash: 0xc665…cf6a)
    2022-08-16 13:43:58 👴 Loading GRANDPA authority set from genesis on what appears to be first startup.
    2022-08-16 13:43:59 Using default protocol ID "sup" because none is configured in the chain specs
@@ -281,7 +281,7 @@ Substrate 前端模板由用户界面组件组成，使您可以与 Substrate �
 
 2. 按Control-c终止正在运行的进程。
 
-3. 验证您的终端是否已返回到`substrate-node-template`目录中的终端提示符。
+3. 验证您的终端是否已返回到`substrate-solo-template-node`目录中的终端提示符。
 
 ## 下一步
 

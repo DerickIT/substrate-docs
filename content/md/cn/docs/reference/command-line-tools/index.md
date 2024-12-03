@@ -10,7 +10,7 @@ keywords:
 | ------------------- | -----------
 | [archive](/reference/command-line-tools/archive) | 将基于 Substrate 的链的所有区块、状态和交易数据索引并存储在关系型 SQL 数据库中。
 | [memory-profiler](/reference/command-line-tools/memory-profiler) | 收集有关内存分配和区块链应用程序随时间推移的行为的信息。
-| [node-template](/reference/command-line-tools/node-template) | 启动和管理一个预先配置了常用 FRAME 模块子集的 Substrate 节点。
+| [solo-template-node](/reference/command-line-tools/solo-template-node) | 启动和管理一个预先配置了常用 FRAME 模块子集的 Substrate 节点。
 | [polkadot-launch](https://github.com/paritytech/polkadot-launch) | 启动一个本地 Polkadot 测试网络。
 | [polkadot-apps](https://polkadot.js.org/apps) | 使用浏览器与 Polkadot 或 Substrate 节点交互。
 | [sidecar](/reference/command-line-tools/sidecar/) | 使用 REST 服务与使用 FRAME 构建的区块链节点交互。

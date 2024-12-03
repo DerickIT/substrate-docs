@@ -19,7 +19,7 @@ FRAME 包含许多专用宏，这些宏使您可以轻松地将应用程序逻�
 
 1. 根据需要打开新的终端。
 
-2. 更改到工作区中包含`workshop-node-template/pallets`目录的目录。
+2. 更改到工作区中包含`workshop-solo-template-node/pallets`目录的目录。
 
 3. 通过运行以下命令为`collectibles`模块创建一个新的 Rust 项目：
 
@@ -45,7 +45,7 @@ FRAME 包含许多专用宏，这些宏使您可以轻松地将应用程序逻�
    ```
 
    在 Rust 中，每个包的`Cargo.toml`文件称为包清单，它定义了包所需的配置设置和依赖项。
-   `workshop-node-template/pallets/collectibles`文件夹中的`Cargo.toml`文件定义了您正在构建的`collectibles`包的依赖项。
+   `workshop-solo-template-node/pallets/collectibles`文件夹中的`Cargo.toml`文件定义了您正在构建的`collectibles`包的依赖项。
 
    按照约定，Substrate 项目（包括模块）的源代码通常位于`src/lib.rs`文件中。
    默认情况下，Cargo 为新项目创建模板`src/main.rs`文件。
@@ -65,7 +65,7 @@ FRAME 包含许多专用宏，这些宏使您可以轻松地将应用程序逻�
 在这种情况下，清单文件描述了工作区成员。
 要将新模块添加到工作区：
 
-1. 更改到工作区中包含`workshop-node-template`目录的目录。
+1. 更改到工作区中包含`workshop-solo-template-node`目录的目录。
 
 1. 在代码编辑器中打开`Cargo.toml`文件。
 

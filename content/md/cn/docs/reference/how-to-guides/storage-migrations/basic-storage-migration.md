@@ -16,7 +16,7 @@ keywords:
 
 我们将对 [FRAME 的 Nick's pallet](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/nicks) 进行更改，在教程 [将 pallet 添加到运行时](/tutorials/build-application-logic/add-a-pallet/) 中，我们展示了如何将 Nicks pallet 添加到节点模板的运行时中。
 
-对于本指南，因为我们将更改 pallet 的代码，我们将获取 pallet 的代码并将其本地添加到我们的节点模板中。您可以查看如何在本地添加它的示例 [此处](https://github.com/substrate-developer-hub/substrate-node-template/commit/022b6da0d1d55f54de3568e97aa5fe45a7975fa5)。
+对于本指南，因为我们将更改 pallet 的代码，我们将获取 pallet 的代码并将其本地添加到我们的节点模板中。您可以查看如何在本地添加它的示例 [此处](https://github.com/paritytech/polkadot-sdk-solochain-template/commit/022b6da0d1d55f54de3568e97aa5fe45a7975fa5)。
 
 为了进行测试，我们现在可以启动我们的节点，并使用 Nicks pallet 中的外部函数 `setName` 来设置昵称。
 
@@ -89,7 +89,7 @@ pub fn set_name(origin,
     <NameOf<T>>::insert(&sender, (Nickname{first: bounded_first, last: bounded_last}, deposit));
     }
 ```
-查看如何更新外部函数的示例 [此处](https://github.com/substrate-developer-hub/substrate-node-template/commit/a9ee9b2b9096c2b85ecb4448366df2b8502e7aa7)。
+查看如何更新外部函数的示例 [此处](https://github.com/paritytech/polkadot-sdk-solochain-template/commit/a9ee9b2b9096c2b85ecb4448366df2b8502e7aa7)。
 
 ## 添加存储版本
 
@@ -212,7 +212,7 @@ mod migration;
 	}
 ```
 
-查看完整迁移代码的示例 [此处](https://github.com/substrate-developer-hub/substrate-node-template/commit/cfbe01dd4be358d0df45a81b87b6ba7393e20368)。
+查看完整迁移代码的示例 [此处](https://github.com/paritytech/polkadot-sdk-solochain-template/commit/cfbe01dd4be358d0df45a81b87b6ba7393e20368)。
 
 ## 更新单元测试
 
@@ -246,11 +246,11 @@ mod migration;
 		});
 	}
 ```
-查看完整测试修复的示例 [此处](https://github.com/substrate-developer-hub/substrate-node-template/commit/fa021b11878e8621bb455d4638e1821b681c085e)。
+查看完整测试修复的示例 [此处](https://github.com/paritytech/polkadot-sdk-solochain-template/commit/fa021b11878e8621bb455d4638e1821b681c085e)。
 
 ## 示例
 
-- [迁移 Nicks pallet](https://github.com/substrate-developer-hub/substrate-node-template/tree/alexd10s/how-to-storage-migration-example)
+- [迁移 Nicks pallet](https://github.com/paritytech/polkadot-sdk-solochain-template/tree/alexd10s/how-to-storage-migration-example)
 
 ## 资源
 

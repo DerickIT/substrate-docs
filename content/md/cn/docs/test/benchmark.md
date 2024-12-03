@@ -154,7 +154,7 @@ cargo build --profile=production --features runtime-benchmarks
 如果您使用 `production` 配置文件编译节点，则可以通过运行以下命令列出可用的基准测试：
 
 ```bash
-./target/production/node-template benchmark pallet --list
+./target/production/solo-template-node benchmark pallet --list
 ```
 
 ### 对所有 pallet 中的所有函数进行基准测试
@@ -162,7 +162,7 @@ cargo build --profile=production --features runtime-benchmarks
 要执行运行时的所有基准测试，您可以运行类似于以下命令的命令：
 
 ```bash
-./target/production/node-template benchmark pallet \
+./target/production/solo-template-node benchmark pallet \
     --chain dev \
     --execution=wasm \
     --wasm-execution=compiled \
@@ -180,7 +180,7 @@ cargo build --profile=production --features runtime-benchmarks
 要执行特定 pallet 中特定函数的基准测试，您可以运行类似于以下命令的命令：
 
 ```bash
-./target/production/node-template benchmark pallet \
+./target/production/solo-template-node benchmark pallet \
     --chain dev \
     --execution=wasm \
     --wasm-execution=compiled \
@@ -209,13 +209,13 @@ cargo build --profile=production --features runtime-benchmarks
 要获取 `benchmark` 子命令的完整列表，请运行：
 
 ```bash
-./target/production/node-template benchmark --help
+./target/production/solo-template-node benchmark --help
 ```
 
 要获取 `benchmark pallet` 子命令的可用选项的完整列表，请运行：
 
 ```bash
-./target/production/node-template benchmark pallet --help
+./target/production/solo-template-node benchmark pallet --help
 ```
 
 ## 接下来的步骤
@@ -223,4 +223,4 @@ cargo build --profile=production --features runtime-benchmarks
 - [frame-benchmarking 自述文件](https://github.com/paritytech/polkadot-sdk/blob/master/substrate/frame/benchmarking/README.md)
 - [Substrate 研讨会：对您的 Substrate Pallet 进行基准测试](https://www.youtube.com/watch?v=Qa6sTyUqgek)
 - [操作指南：添加基准测试](/reference/how-to-guides/weights/add-benchmarks)
-- [命令参考：node-template benchmark](/reference/command-line-tools/node-template/#benchmark)
+- [命令参考：solo-template-node benchmark](/reference/command-line-tools/solo-template-node/#benchmark)

@@ -22,7 +22,7 @@ keywords:
 ## 开始之前
 
 确保您有一个可用于构建结构体的模块。
-如果您没有正在使用的模块，请使用 [模板模块](https://github.com/substrate-developer-hub/substrate-node-template/blob/main/pallets/template/src/lib.rs)。
+如果您没有正在使用的模块，请使用 [模板模块](https://github.com/paritytech/polkadot-sdk-solochain-template/blob/main/pallets/template/src/lib.rs)。
 
 1. 创建一个结构体
 

@@ -6,7 +6,7 @@ keywords:
 
 所有 Substrate 教程和操作指南都需要您在开发环境中构建和运行 Substrate 节点。
 为了帮助您快速设置工作环境，[Substrate 开发者中心](https://github.com/substrate-developer-hub/) 为您维护了_模板_。
-例如，[substrate-node-template](https://github.com/paritytech/polkadot-sdk-solochain-template/tags/) 是主要 Substrate `node-template` 二进制文件的快照，其中包含一组核心功能，可帮助您入门。
+例如，[substrate-solo-template-node](https://github.com/paritytech/polkadot-sdk-solochain-template/tags/) 是主要 Substrate `solo-template-node` 二进制文件的快照，其中包含一组核心功能，可帮助您入门。
 
 启动节点后，您可以使用 Web 浏览器和一个简单的应用程序连接到它，该应用程序允许您查找预定义帐户的余额。
 

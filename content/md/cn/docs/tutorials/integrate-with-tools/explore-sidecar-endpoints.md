@@ -89,7 +89,7 @@ Postman 提供了一个易于使用的界面，使经验丰富和经验不足的
         ✅ PORT: 8080
    2023-01-04 14:35:41 info: Version: 14.2.2
    2023-01-04 14:35:41 warn: API/INIT: RPC methods not decorated: transaction_unstable_submitAndWatch, transaction_unstable_unwatch
-   2023-01-04 14:35:41 info: Connected to chain Development on the node-template client at ws://127.0.0.1:9944
+   2023-01-04 14:35:41 info: Connected to chain Development on the solo-template-node client at ws://127.0.0.1:9944
    2023-01-04 14:35:41 info: Listening on http://127.0.0.1:8080/
    2023-01-04 14:35:41 info: Check the root endpoint (http://127.0.0.1:8080/) to see the available endpoints for the current node
    ```
@@ -196,7 +196,7 @@ Postman 提供了一个易于使用的界面，使经验丰富和经验不足的
 
 现在您已经熟悉了发出简单的请求，让我们执行另一个`GET`请求，但这次修改其中一个环境变量的值。
 在此请求中，您将请求链上特定帐户的余额。
-使用[substrate 节点模板](https://github.com/substrate-developer-hub/substrate-node-template)作为工作区块链，此请求查询`Alice`用户的帐户余额。
+使用[substrate 节点模板](https://github.com/paritytech/polkadot-sdk-solochain-template)作为工作区块链，此请求查询`Alice`用户的帐户余额。
 
 要获取 Alice 地址的帐户信息：
 
@@ -206,7 +206,7 @@ Postman 提供了一个易于使用的界面，使经验丰富和经验不足的
    例如，通过运行以下命令来检查`//Alice`帐户的关键信息：
 
    ```bash
-   ./target/release/node-template key inspect //Alice
+   ./target/release/solo-template-node key inspect //Alice
    ```
 
    复制帐户的公钥：

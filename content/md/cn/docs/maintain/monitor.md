@@ -159,7 +159,7 @@ susbtrate_block_height{status="finalized"} 133
 例如，要指定您自己的遥测服务器 URL 以及详细程度级别 5，您将运行类似于以下内容的命令：
 
 ```bash
-./target/release/node-template --dev \
+./target/release/solo-template-node --dev \
   --telemetry-url "wss://192.168.48.1:9616 5" \
   --prometheus-port 9616 \
   --prometheus-external
@@ -174,5 +174,5 @@ susbtrate_block_height{status="finalized"} 133
 例如，要阻止遥测数据发送到默认遥测服务器，您将运行类似于以下内容的命令：
 
 ```bash
-./target/release/node-template --chain myCustomChain \
+./target/release/solo-template-node --chain myCustomChain \
   --no-telemetry

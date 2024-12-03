@@ -1,32 +1,32 @@
 ---
-title: node-template
-description: 命令行工具 node-template 的参考信息。
+title: solo-template-node
+description: 命令行工具 solo-template-node 的参考信息。
 keywords:
 ---
 
-`node-template` 程序提供了一个带有 FRAME 系统模块和用于处理常见区块链功能操作的额外模块子集的工作 Substrate 节点。
-凭借其功能模块的基线，`node-template` 作为构建您自己的区块链和开发自定义运行时的入门工具包。
-您可以使用 `node-template` 程序启动 Substrate 节点并执行 [子命令](#子命令) 中列出的任务。
+`solo-template-node` 程序提供了一个带有 FRAME 系统模块和用于处理常见区块链功能操作的额外模块子集的工作 Substrate 节点。
+凭借其功能模块的基线，`solo-template-node` 作为构建您自己的区块链和开发自定义运行时的入门工具包。
+您可以使用 `solo-template-node` 程序启动 Substrate 节点并执行 [子命令](#子命令) 中列出的任务。
 
 ## 基本命令用法
 
-运行 `node-template` 命令的基本语法是：
+运行 `solo-template-node` 命令的基本语法是：
 
 ```shell
-node-template [子命令] [标志] [选项]
+solo-template-node [子命令] [标志] [选项]
 ```
 
 根据您指定的子命令，可能适用或需要其他参数、选项和标志。
-要查看特定 `node-template` 子命令的用法信息，请指定子命令和 `--help` 标志。
-例如，要查看 `node-template key` 的用法信息，您可以运行以下命令：
+要查看特定 `solo-template-node` 子命令的用法信息，请指定子命令和 `--help` 标志。
+例如，要查看 `solo-template-node key` 的用法信息，您可以运行以下命令：
 
 ```shell
-node-template key --help
+solo-template-node key --help
 ```
 
 ### 标志
 
-您可以在 `node-template` 命令中使用以下可选标志。
+您可以在 `solo-template-node` 命令中使用以下可选标志。
 
 | 标志   | 描述
 | ------ | -----------
@@ -67,7 +67,7 @@ node-template key --help
 
 ### 选项
 
-您可以在 `node-template` 命令中使用以下选项。
+您可以在 `solo-template-node` 命令中使用以下选项。
 
 | 选项 | 描述
 | ------ | -----------
@@ -124,7 +124,7 @@ node-template key --help
 
 ### 子命令
 
-您可以在 `node-template` 命令中使用以下子命令。
+您可以在 `solo-template-node` 命令中使用以下子命令。
 有关参考信息和说明使用这些子命令的示例，请选择相应的命令。
 
 | 命令 | 描述
@@ -134,7 +134,7 @@ node-template key --help
 | `check-block` | 验证区块。
 | `export-blocks` | 导出区块。
 | `export-state` | 将给定区块的状态导出到链规范中。
-| `help` | 显示 `node-template` 的用法信息或任何 `node-template` 子命令的命令行用法信息摘要。
+| `help` | 显示 `solo-template-node` 的用法信息或任何 `solo-template-node` 子命令的命令行用法信息摘要。
 | `import-blocks` | 导入区块。
 | `key` | 提供本地密钥管理实用程序。
 | `purge-chain` | 删除所有链数据。
@@ -142,21 +142,21 @@ node-template key --help
 
 ## benchmark
 
-使用 `node-template benchmark` 命令分析在运行时模块中配置的外部调用中执行交易所需的资源。
+使用 `solo-template-node benchmark` 命令分析在运行时模块中配置的外部调用中执行交易所需的资源。
 您可以分析特定模块中的单个外部调用，或分析所有模块中的所有外部调用。
 使用 `benchmark` 子命令，您可以使用其他命令行选项来测试不同的执行场景并比较结果。
 
-请注意，您必须使用启用了基准测试的节点进行编译才能使用 `node-template benchmark` 的所有子命令。
+请注意，您必须使用启用了基准测试的节点进行编译才能使用 `solo-template-node benchmark` 的所有子命令。
 要使用启用了基准测试功能的节点进行编译，请运行以下命令：
 
 ```shell
-cargo build --package node-template --release --features runtime-benchmarks
+cargo build --package solo-template-node --release --features runtime-benchmarks
 ```
 
 #### 基本命令用法
 
 ```shell
-node-template benchmark [子命令] [标志] [选项]
+solo-template-node benchmark [子命令] [标志] [选项]
 ```
 
 根据您指定的子命令，可能适用或需要其他参数、选项和标志。
@@ -164,23 +164,23 @@ node-template benchmark [子命令] [标志] [选项]
 例如，要查看 `benchmark pallet` 的用法信息，您可以运行以下命令：
 
 ```shell
-node-template benchmark pallet --help
+solo-template-node benchmark pallet --help
 ```
 #### 子命令
 
-您可以在 `node-template benchmark` 命令中使用以下子命令。
+您可以在 `solo-template-node benchmark` 命令中使用以下子命令。
 
 | 命令 | 描述
 | ------- | -----------
 | `block` | 对历史区块的执行时间进行基准测试。
-| `help` | 显示 `node-template benchmark` 或指定子命令的用法信息。
+| `help` | 显示 `solo-template-node benchmark` 或指定子命令的用法信息。
 | `overhead` | 对每个区块和每个外部的执行开销进行基准测试。
 | `pallet` | 对 FRAME 模块的外部权重进行基准测试。
 | `storage` | 对链快照的存储速度进行基准测试。
 
 #### 标志
 
-您可以在 `node-template benchmark` 命令中使用以下可选标志。
+您可以在 `solo-template-node benchmark` 命令中使用以下可选标志。
 
 | 标志   | 描述
 | ------ | -----------
@@ -189,14 +189,14 @@ node-template benchmark pallet --help
 
 #### 选项
 
-您可以在 `node-template benchmark` 子命令中结合使用所有常见的 node-template 命令行选项。
+您可以在 `solo-template-node benchmark` 子命令中结合使用所有常见的 solo-template-node 命令行选项。
 例如，您可以使用 `--base-path <path>` 指定区块链数据的自定义目录，并使用 `--chain <chain-specification>` 指定要与任何 `benchmark` 子命令一起使用的链规范。
 
 但是，还有许多专门用于执行基准测试任务的命令行选项。
-例如，`node-template benchmark block` 子命令支持 `--from` 和 `--to` 命令行选项，用于指定要分析的区块。
+例如，`solo-template-node benchmark block` 子命令支持 `--from` 和 `--to` 命令行选项，用于指定要分析的区块。
 
-由于对 FRAME 模块进行基准测试代表了最常见的基准测试任务，因此 `node-template benchmark pallet` 子命令支持最多的任务特定命令行选项。
-例如，您可以在 `node-template benchmark pallet` 子命令中使用以下选项。
+由于对 FRAME 模块进行基准测试代表了最常见的基准测试任务，因此 `solo-template-node benchmark pallet` 子命令支持最多的任务特定命令行选项。
+例如，您可以在 `solo-template-node benchmark pallet` 子命令中使用以下选项。
 
 | 选项 | 描述
 | ------ | -----------
@@ -228,7 +228,7 @@ node-template benchmark pallet --help
 在您使用启用了基准测试的运行时编译后，您可以运行类似以下命令来对所有配置了运行时基准测试的模块中的所有函数调用进行基准测试：
 
 ```shell
-./target/release/node-template benchmark pallet \
+./target/release/solo-template-node benchmark pallet \
     --chain dev \
     --extrinsic "*" \
     --pallet "*" \
@@ -241,7 +241,7 @@ node-template benchmark pallet --help
 例如，以下命令执行 `pallet_template` 中的 `do_something` 函数，并调用该函数 20 次以获取 10 个数据点：
 
 ```shell
-./target/release/node-template benchmark pallet \
+./target/release/solo-template-node benchmark pallet \
     --chain dev \
     --extrinsic do_something \
     --pallet pallet_template \
@@ -308,10 +308,10 @@ Reads = 0 + (0 * s)
 Writes = 1 + (0 * s)
 ```
 
-要测量每个区块和每个外部的平均、中位数、最小值和最大值执行时间，您可以运行 `node-template benchmark overhead` 子命令：
+要测量每个区块和每个外部的平均、中位数、最小值和最大值执行时间，您可以运行 `solo-template-node benchmark overhead` 子命令：
 
 ```shell
-./target/release/node-template benchmark overhead
+./target/release/solo-template-node benchmark overhead
 ```
 
 该命令将显示类似以下内容的输出：
@@ -345,7 +345,7 @@ Per-extrinsic execution overhead [ns]:
 要测量 Substrate 开发链规范的存储执行时间，您可以运行以下命令：
 
 ```shell
-./target/release/node-template benchmark storage --state-version 1
+./target/release/solo-template-node benchmark storage --state-version 1
 ```
 
 该命令将显示类似以下内容的输出：
@@ -388,17 +388,17 @@ Writing weights to "rocksdb_weights.rs"
 
 ## build-spec
 
-使用 `node-template build-spec` 命令为您的运行时创建链规范文件。
+使用 `solo-template-node build-spec` 命令为您的运行时创建链规范文件。
 
 #### 基本命令用法
 
 ```shell
-node-template build-spec [标志] [选项]
+solo-template-node build-spec [标志] [选项]
 ```
 
 #### 标志
 
-您可以在 `node-template build-spec` 命令中使用以下可选标志。
+您可以在 `solo-template-node build-spec` 命令中使用以下可选标志。
 
 | 标志   | 描述
 | ------ | -----------
@@ -413,7 +413,7 @@ node-template build-spec [标志] [选项]
 
 #### 选项
 
-您可以在 `node-template build-spec` 命令中使用以下命令行选项。
+您可以在 `solo-template-node build-spec` 命令中使用以下命令行选项。
 
 | 选项   | 描述
 | -------- | -----------

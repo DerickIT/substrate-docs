@@ -78,13 +78,13 @@ Substrate 公开了可在端口 `9615` 上使用的 [Prometheus 公开格式](ht
 2. 必要时，通过运行以下命令更改到节点模板目录的根目录：
 
    ```bash
-   cd substrate-node-template
+   cd substrate-solo-template-node
    ```
 
 3. 通过运行以下命令以开发模式启动节点模板：
 
    ```bash
-   ./target/release/node-template --dev
+   ./target/release/solo-template-node --dev
    ```
 
 ## 配置 Prometheus 端点
@@ -215,7 +215,7 @@ brew services start grafana
 
 ## 导入模板仪表板
 
-如果您想要一个基本的仪表板来开始，您可以导入一个 [Substrate 仪表板模板](/assets/tutorials/monitor-node/substrate-node-template-metrics.json) 以获取有关您的节点的基本信息。
+如果您想要一个基本的仪表板来开始，您可以导入一个 [Substrate 仪表板模板](/assets/tutorials/monitor-node/substrate-solo-template-node-metrics.json) 以获取有关您的节点的基本信息。
 
 要导入仪表板模板：
 
@@ -225,7 +225,7 @@ brew services start grafana
 
 2. 对于搜索选项，点击新建并选择**导入**。
 
-3. 复制 [Substrate 仪表板模板](https://github.com/substrate-developer-hub/substrate-docs/blob/main/static/assets/tutorials/monitor-node/substrate-node-template-metrics.json) 并将其粘贴到**通过面板 json 导入**文本框中。
+3. 复制 [Substrate 仪表板模板](https://github.com/substrate-developer-hub/substrate-docs/blob/main/static/assets/tutorials/monitor-node/substrate-solo-template-node-metrics.json) 并将其粘贴到**通过面板 json 导入**文本框中。
 
 4. 点击**加载**。
 

@@ -28,7 +28,7 @@ keywords:
    此示例在开发模式下启动节点模板。
 
    ```bash
-   ./target/release/node-template --tmp --dev
+   ./target/release/solo-template-node --tmp --dev
    ```
 
 1. 在新的终端中，创建一个名为 `TempWasms` 的临时文件夹。

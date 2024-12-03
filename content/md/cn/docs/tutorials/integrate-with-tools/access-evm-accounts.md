@@ -19,9 +19,9 @@ keywords:
 - 从以太坊主网导入状态。
 
 本教程使用预定义的节点模板来提供工作环境。
-该模板是使用[Frontier 发行指南](https://github.com/paritytech/frontier/blob/master/docs/node-template-release.md)中的说明生成的。
+该模板是使用[Frontier 发行指南](https://github.com/paritytech/frontier/blob/master/docs/solo-template-node-release.md)中的说明生成的。
 
-如果您想自己生成独立模板，则可以使用[node-template-release.sh](https://github.com/paritytech/frontier/blob/master/.maintain/node-template-release.sh)模板生成脚本。
+如果您想自己生成独立模板，则可以使用[solo-template-node-release.sh](https://github.com/paritytech/frontier/blob/master/.maintain/solo-template-node-release.sh)模板生成脚本。
 如果您使用[frontier](https://github.com/paritytech/frontier)存储库或模板生成脚本构建自己的节点，请注意 Frontier 使用其自身的 Substrate crates版本，您可能需要更新`Cargo`文件中的依赖项以匹配项目中的依赖项。
 
 ## 开始之前
@@ -47,14 +47,14 @@ keywords:
 
 ## 创世配置
 
-`frontier-node-template`中的开发[链规范](https://github.com/substrate-developer-hub/frontier-node-template/blob/main/node/src/chain_spec.rs)定义了一个创世块，该块已预先配置了`alice`帐户的 EVM 帐户。
+`frontier-solo-template-node`中的开发[链规范](https://github.com/substrate-developer-hub/frontier-solo-template-node/blob/main/node/src/chain_spec.rs)定义了一个创世块，该块已预先配置了`alice`帐户的 EVM 帐户。
 当您以开发模式启动此节点时，`alice`的 EVM 帐户将获得默认数量的以太币。
 您将使用此帐户来查看 EVM 帐户详细信息并调用以太坊智能合约。
 启动节点后，您将能够使用[Polkadot-JS 应用程序](https://polkadot.js.org/apps/#?rpc=ws://127.0.0.1:9944)查看`alice`的 EVM 帐户的详细信息。
 
 ## 编译 Frontier 节点
 
-[Frontier 节点模板](https://github.com/substrate-developer-hub/frontier-node-template)提供了一个可工作的开发环境，以便您可以立即开始在 Substrate 上构建。
+[Frontier 节点模板](https://github.com/substrate-developer-hub/frontier-solo-template-node)提供了一个可工作的开发环境，以便您可以立即开始在 Substrate 上构建。
 
 要编译 Frontier 节点模板：
 
@@ -63,13 +63,13 @@ keywords:
 1. 通过运行以下命令克隆节点模板存储库：
 
    ```bash
-   git clone https://github.com/substrate-developer-hub/frontier-node-template.git
+   git clone https://github.com/substrate-developer-hub/frontier-solo-template-node.git
    ```
 
 1. 通过运行以下命令更改到节点模板目录的根目录：
 
    ```bash
-   cd frontier-node-template
+   cd frontier-solo-template-node
    ```
 
 1. 通过运行以下命令编译节点模板：
@@ -86,7 +86,7 @@ keywords:
 
 1. 根据需要在本地计算机上打开终端 shell。
 
-1. 更改到您编译`frontier-node-template`的根目录。
+1. 更改到您编译`frontier-solo-template-node`的根目录。
 
 1. 通过运行以下命令以开发模式启动节点：
 
@@ -164,7 +164,7 @@ keywords:
 1. 为地址指定`alice`帐户的 EVM 帐户标识符。
 
    预定义的帐户地址为`0xd43593c715fdd31c61141abd04a99fd6822c8558`。
-   帐户的地址是使用[Substrate EVM 实用程序](https://github.com/substrate-developer-hub/frontier-node-template/tree/main/utils/README.md#--evm-address-address)根据`alice`帐户的公钥计算得出的。
+   帐户的地址是使用[Substrate EVM 实用程序](https://github.com/substrate-developer-hub/frontier-solo-template-node/tree/main/utils/README.md#--evm-address-address)根据`alice`帐户的公钥计算得出的。
 
 1. 点击**提交 RPC 调用**。
 
@@ -178,11 +178,11 @@ keywords:
 ## 部署智能合约
 
 现在您已经了解了如何查询以太坊地址的余额，您可能希望探索如何部署和调用以太坊智能合约以及测试相关功能。
-本教程使用[Truffle](https://www.trufflesuite.com/truffle)示例合约，该合约定义了一个[ERC-20 代币](https://github.com/substrate-developer-hub/frontier-node-template/blob/main/examples/contract-erc20/truffle/contracts/MyToken.sol)。您还可以使用 Polkadot JS SDK 和[Typescript](https://github.com/substrate-developer-hub/frontier-node-template/tree/main/examples/contract-erc20)创建 ERC-20 代币合约。
+本教程使用[Truffle](https://www.trufflesuite.com/truffle)示例合约，该合约定义了一个[ERC-20 代币](https://github.com/substrate-developer-hub/frontier-solo-template-node/blob/main/examples/contract-erc20/truffle/contracts/MyToken.sol)。您还可以使用 Polkadot JS SDK 和[Typescript](https://github.com/substrate-developer-hub/frontier-solo-template-node/tree/main/examples/contract-erc20)创建 ERC-20 代币合约。
 
 1. 创建 ERC-20 合约。
 
-   为方便起见，您可以使用[MyToken.json](https://github.com/substrate-developer-hub/frontier-node-template/blob/main/examples/contract-erc20/truffle/contracts/MyToken.json)中代币合约的已编译`bytecode`来在 Substrate 区块链上部署合约。
+   为方便起见，您可以使用[MyToken.json](https://github.com/substrate-developer-hub/frontier-solo-template-node/blob/main/examples/contract-erc20/truffle/contracts/MyToken.json)中代币合约的已编译`bytecode`来在 Substrate 区块链上部署合约。
 
 1. 验证您的节点是否仍在运行，并且[Polkadot-JS 应用程序](https://polkadot.js.org/apps/#?rpc=ws://127.0.0.1:9944)已连接到节点。
 
@@ -249,7 +249,7 @@ keywords:
 
 1. 将要读取的存储槽指定为第二个参数`0x045c0350b9cf0df39c4b40400c965118df2dca5ce0fbcf0de4aafc099aea4a14`。
 
-   地址的存储槽是使用[Substrate EVM 实用程序](https://github.com/substrate-developer-hub/frontier-node-template/tree/main/utils/README.md#--erc20-slot-slot-address)根据槽 0 和帐户标识符`0xd43593c715fdd31c61141abd04a99fd6822c8558`计算得出的。
+   地址的存储槽是使用[Substrate EVM 实用程序](https://github.com/substrate-developer-hub/frontier-solo-template-node/tree/main/utils/README.md#--erc20-slot-slot-address)根据槽 0 和帐户标识符`0xd43593c715fdd31c61141abd04a99fd6822c8558`计算得出的。
 
    返回的值应为`0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff`。
 

@@ -9,7 +9,7 @@ keywords:
 
 本节中的教程使用预配置的[`substrate-contracts-node`](https://github.com/paritytech/substrate-contracts-node)来使您的工作重点放在编写智能合约的基础知识上。
 
-如果您使用[标准节点模板](https://github.com/substrate-developer-hub/substrate-node-template)，则必须手动添加[Contracts 模块](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/contracts)，并对开发环境进行其他更改。
+如果您使用[标准节点模板](https://github.com/paritytech/polkadot-sdk-solochain-template)，则必须手动添加[Contracts 模块](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/contracts)，并对开发环境进行其他更改。
 您可以比较两个节点的运行时代码，以查看有关它们之间差异的更多信息。
 
 - [准备您的第一个合约](/tutorials/smart-contracts/prepare-your-first-contract/)描述了如何更新您的开发环境以及如何使用 ink!编程语言创建智能合约项目。

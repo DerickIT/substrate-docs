@@ -7,7 +7,7 @@ keywords:
   - 来源
 ---
 
-在[向运行时添加模块](/tutorials/build-application-logic/add-a-pallet)中，您向[Substrate 节点模板](https://github.com/substrate-developer-hub/substrate-node-template)运行时添加了来自`pallet_nicks`的函数。
+在[向运行时添加模块](/tutorials/build-application-logic/add-a-pallet)中，您向[Substrate 节点模板](https://github.com/paritytech/polkadot-sdk-solochain-template)运行时添加了来自`pallet_nicks`的函数。
 
 Nicks 模块允许区块链用户支付押金以预留他们控制的帐户的昵称。
 它实现了以下功能：
@@ -59,7 +59,7 @@ Nicks 模块允许区块链用户支付押金以预留他们控制的帐户的�
 type ForceOrigin = frame_system::EnsureRoot<AccountId>;
 ```
 
-在节点模板的开发[链规范](https://github.com/substrate-developer-hub/substrate-node-template/blob/main/node/src/chain_spec.rs)中，[Sudo 模块](https://paritytech.github.io/substrate/master/pallet_sudo/index.html)配置为使用 Alice 帐户作为 FRAME 系统`Root`来源。
+在节点模板的开发[链规范](https://github.com/paritytech/polkadot-sdk-solochain-template/blob/main/node/src/chain_spec.rs)中，[Sudo 模块](https://paritytech.github.io/substrate/master/pallet_sudo/index.html)配置为使用 Alice 帐户作为 FRAME 系统`Root`来源。
 由于此配置，默认情况下，只有 Alice 帐户才能调用需要`ForceOrigin`类型的函数。
 
 如果您尝试使用除 Alice 帐户以外的帐户调用`kill_name`或`force_name`，则该调用将无法执行。
@@ -69,7 +69,7 @@ type ForceOrigin = frame_system::EnsureRoot<AccountId>;
 为了演示调用来源如何影响操作，让我们设置并尝试强制删除另一个帐户的帐户名称。
 对于此演示，请确保您拥有：
 
-- 以开发模式运行的节点模板：`./target/release/node-template --dev`
+- 以开发模式运行的节点模板：`./target/release/solo-template-node --dev`
 - 正在运行并连接到本地节点的前端模板：`yarn start`
 - 连接到本地 Web 服务器的浏览器：<http://localhost:8000/> <!-- markdown-link-check-disable-line -->
 
@@ -119,7 +119,7 @@ type ForceOrigin = frame_system::EnsureRoot<AccountId>;
 
 对于此演示，请确保您拥有：
 
-- 以开发模式运行的节点模板：`./target/release/node-template --dev`
+- 以开发模式运行的节点模板：`./target/release/solo-template-node --dev`
 - 正在运行并连接到本地节点的前端模板：`yarn start`
 - 连接到本地 Web 服务器的浏览器：<http://localhost:8000/> <!-- markdown-link-check-disable-line -->
 

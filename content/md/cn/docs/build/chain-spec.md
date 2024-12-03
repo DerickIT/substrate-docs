@@ -137,6 +137,6 @@ substrate build-spec --chain=myCustomSpec.json --raw > customSpecRaw.json
 - [添加受信任的节点](/tutorials/build-a-blockchain/add-trusted-nodes/)
 - [操作方法：配置创世状态](/reference/how-to-guides/basics/configure-genesis-state/)
 - [操作方法：自定义链规范](/reference/how-to-guides/basics/customize-a-chain-specification/)
-- [节点模板链规范](https://github.com/substrate-developer-hub/substrate-node-template/blob/master/node/src/chain_spec.rs)
+- [节点模板链规范](https://github.com/paritytech/polkadot-sdk-solochain-template/blob/master/node/src/chain_spec.rs)
 - [ChainSpec 结构](https://paritytech.github.io/substrate/master/sc_service/struct.GenericChainSpec.html)
 - [ProtocolId 结构](https://paritytech.github.io/substrate/master/sc_network/config/struct.ProtocolId.html)

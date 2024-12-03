@@ -376,7 +376,7 @@ Ansible 使用**剧本**来编排、配置、管理和部署系统组件。
 # 这是构建 Substrate 节点的基本映像
 FROM docker.io/paritytech/ci-linux:production as builder
 
-WORKDIR /node-template
+WORKDIR /solo-template-node
 COPY . .
 RUN cargo build --locked --release
 
@@ -387,32 +387,32 @@ LABEL description="Substrate 节点模板的多阶段 Docker 映像" \
   image.authors="you@email.com" \
   image.vendor="Substrate 开发者中心" \
   image.description="Substrate 节点模板的多阶段 Docker 映像" \
-  image.source="https://github.com/substrate-developer-hub/substrate-node-template" \
-  image.documentation="https://github.com/substrate-developer-hub/substrate-node-template"
+  image.source="https://github.com/paritytech/polkadot-sdk-solochain-template" \
+  image.documentation="https://github.com/paritytech/polkadot-sdk-solochain-template"
 
 # 复制节点二进制文件。
-COPY --from=builder /node-template/target/release/node-template /usr/local/bin
+COPY --from=builder /solo-template-node/target/release/solo-template-node /usr/local/bin
 
 RUN useradd -m -u 1000 -U -s /bin/sh -d /node-dev node-dev && \
   mkdir -p /chain-data /node-dev/.local/share && \
   chown -R node-dev:node-dev /chain-data && \
-  ln -s /chain-data /node-dev/.local/share/node-template && \
+  ln -s /chain-data /node-dev/.local/share/solo-template-node && \
   # 清理并最大程度地减少攻击面
   rm -rf /usr/bin /usr/sbin && \
   # 检查可执行文件是否在此容器中工作
-  /usr/local/bin/node-template --version
+  /usr/local/bin/solo-template-node --version
 
 USER node-dev
 
 EXPOSE 30333 9933 9944 9615
 VOLUME ["/chain-data"]
 
-ENTRYPOINT ["/usr/local/bin/node-template"]
+ENTRYPOINT ["/usr/local/bin/solo-template-node"]
 ```
 
 ### 自动化构建管道
 
-以下示例[GitHub 操作](https://github.com/substrate-developer-hub/substrate-node-template/blob/main/.github/workflows/release.yml) 将 Docker 映像构建并发布到 DockerHub。
+以下示例[GitHub 操作](https://github.com/paritytech/polkadot-sdk-solochain-template/blob/main/.github/workflows/release.yml) 将 Docker 映像构建并发布到 DockerHub。
 在大多数情况下，您使用手动工作流或发布新版本时触发此操作。
 
 请注意，您必须按照[加密机密](https://docs.github.com/en/actions/security-guides/encrypted-secrets)中的说明将机密添加到您的 GitHub 存储库或组织中，以安全地发布映像。

@@ -209,13 +209,13 @@ keywords:
 1. 通过运行以下命令来启用 `runtime-benchmarks` 功能构建您的项目：
 
    ```bash
-   cargo build --package node-template --release --features runtime-benchmarks
+   cargo build --package solo-template-node --release --features runtime-benchmarks
    ```
 
 2. 查看节点 `benchmark pallet` 子命令的命令行选项：
 
    ```bash
-   ./target/release/node-template benchmark pallet --help
+   ./target/release/solo-template-node benchmark pallet --help
    ```
 
    `benchmark pallet` 子命令支持多个命令行选项，这些选项可以帮助您自动化基准测试。
@@ -224,7 +224,7 @@ keywords:
 3. 通过运行类似于以下命令的命令来启动 pallet 的基准测试：
 
    ```bash
-   ./target/release/node-template benchmark pallet \
+   ./target/release/solo-template-node benchmark pallet \
     --chain dev \
     --pallet pallet_mycustom \
     --extrinsic '*' \
