@@ -14,8 +14,8 @@ const siteMetadata = require('./config/siteMetadata');
 module.exports = {
   siteMetadata: {
     ...siteMetadata,
-    siteUrl: 'https://docs.substrate.io',
-    docsUrl: 'https://docs.substrate.io',
+    siteUrl: 'https://substrate-docs.pages.dev',
+    docsUrl: 'https://substrate-docs.pages.dev',
   },
   plugins: [
     'gatsby-plugin-substrate',

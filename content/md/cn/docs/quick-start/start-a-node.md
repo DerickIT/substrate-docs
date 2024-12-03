@@ -6,7 +6,7 @@ keywords:
 
 所有 Substrate 教程和操作指南都需要您在开发环境中构建和运行 Substrate 节点。
 为了帮助您快速设置工作环境，[Substrate 开发者中心](https://github.com/substrate-developer-hub/) 为您维护了_模板_。
-例如，[substrate-node-template](https://github.com/substrate-developer-hub/substrate-node-template/tags/) 是主要 Substrate `node-template` 二进制文件的快照，其中包含一组核心功能，可帮助您入门。
+例如，[substrate-node-template](https://github.com/paritytech/polkadot-sdk-solochain-template/tags/) 是主要 Substrate `node-template` 二进制文件的快照，其中包含一组核心功能，可帮助您入门。
 
 启动节点后，您可以使用 Web 浏览器和一个简单的应用程序连接到它，该应用程序允许您查找预定义帐户的余额。
 
@@ -30,17 +30,17 @@ keywords:
 1. 通过运行以下命令克隆节点模板存储库：
 
    ```sh
-   git clone https://github.com/substrate-developer-hub/substrate-node-template
+   git clone https://github.com/paritytech/polkadot-sdk-solochain-template
    ```
 
    此命令将克隆 `main` 分支。
 
-   或者，您可以使用 `--branch` 命令行选项和一个 [标签](https://github.com/substrate-developer-hub/substrate-node-template/tags) 来指定您希望节点与之兼容的 Polkadot 版本。
+   或者，您可以使用 `--branch` 命令行选项和一个 [标签](https://github.com/paritytech/polkadot-sdk-solochain-template/tags) 来指定您希望节点与之兼容的 Polkadot 版本。
 
 2. 更改到克隆目录的根目录：
 
    ```sh
-   cd substrate-node-template
+   cd polkadot-sdk-solochain-template
    ```
 
 3. 通过运行类似于以下内容的命令来创建一个新分支以保存您的工作：
@@ -60,7 +60,7 @@ keywords:
 4. 编译节点模板：
 
    ```sh
-   cargo build --package node-template --release
+   cargo build --release
    ```
 
    第一次编译节点时，可能需要一些时间才能完成。
@@ -75,7 +75,7 @@ keywords:
 1. 验证您的节点是否已准备好使用，并通过运行以下命令查看有关可用命令行选项的信息：
 
    ```sh
-   ./target/release/node-template --help
+   ./target/release/solochain-template-node --help
    ```
 
    使用信息将显示您可以用来执行以下操作的命令行选项：
@@ -87,7 +87,7 @@ keywords:
 1. 通过运行以下命令查看预定义的 `Alice` 开发帐户的帐户信息：
 
    ```sh
-   ./target/release/node-template key inspect //Alice
+   ./target/release/solochain-template-node key inspect //Alice
    ```
 
    该命令将显示以下帐户和地址信息：
@@ -111,7 +111,7 @@ keywords:
 1. 通过运行以下命令在开发模式下启动节点：
 
    ```sh
-   ./target/release/node-template --dev
+   ./target/release/solochain-template-node --dev
    ```
 
    在开发模式下，链不需要任何对等计算机来终结区块。

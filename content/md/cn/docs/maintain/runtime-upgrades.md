@@ -48,7 +48,7 @@ pub const VERSION: RuntimeVersion = RuntimeVersion {
 | `authoring_version`   | 创作接口的版本。创作节点只有在与本地运行时相等时才会尝试创作区块。                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | `spec_version`        | 运行时规范的版本。除非 Wasm 和原生二进制文件之间的 `spec_name` 、 `spec_version` 和 `authoring_version` 都相同，否则完整节点不会尝试使用其原生运行时代替链上 Wasm 运行时。 `spec_version` 的更新可以作为 CI 过程自动执行，就像 [波卡网络](https://gitlab.parity.io/parity/mirrors/polkadot/-/blob/master/scripts/ci/gitlab/check_extrinsics_ordering.sh) 所做的那样。此参数通常在 `transaction_version` 更新时递增。                      |
 | `impl_version`        | 规范实现的版本。节点可以忽略此版本。它仅用于指示代码不同。只要 `authoring_version` 和 `spec_version` 相同，代码本身可能已更改，但原生和 Wasm 二进制文件执行的操作相同。通常，只有非逻辑中断优化才会导致 `impl_version` 更改。                                                                                                                                                                                                    |
-| `transaction_version` | 处理交易的接口版本。此参数可用于同步硬件钱包或其他签名设备的固件更新，以验证运行时交易是否有效。该参数允许硬件钱包知道可以安全签名的交易。如果 `construct_runtime!` 宏中调色板的索引发生变化，或者可调度函数发生任何变化（例如参数数量或参数类型），则必须增加此数字。如果更新此数字，则 `spec_version` 也必须更新。 |
+| `transaction_version` | 处理交易的接口版本。此参数可用于同步硬件钱包或其他签名设备的固件更新，以验证运行时交易是否有效。该参数允许硬件钱包知道可以安全签名的交易。如果 `construct_runtime!` 宏中pallet的索引发生变化，或者可调度函数发生任何变化（例如参数数量或参数类型），则必须增加此数字。如果更新此数字，则 `spec_version` 也必须更新。 |
 | `apis`                | 支持的 [运行时 API](https://paritytech.github.io/substrate/master/sp_api/macro.impl_runtime_apis.html) 列表及其版本。                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 
 编排引擎（有时称为执行器）在选择执行它之前，会验证原生运行时是否与 WebAssembly 具有相同的共识驱动逻辑。
@@ -104,15 +104,15 @@ Substrate 存储库使用 [`E1-runtimemigration`](https://github.com/paritytech/
 
 ### 迁移排序
 
-默认情况下，FRAME 根据调色板在 `construct_runtime!` 宏中出现的顺序对 `on_runtime_upgrade` 函数的执行进行排序。
-对于升级，函数按_反向_顺序运行，从最后执行的调色板开始。
+默认情况下，FRAME 根据pallet在 `construct_runtime!` 宏中出现的顺序对 `on_runtime_upgrade` 函数的执行进行排序。
+对于升级，函数按_反向_顺序运行，从最后执行的pallet开始。
 如果需要，您可以强制执行自定义顺序（请参阅 [此处的示例](https://github.com/hicommonwealth/edgeware-node/blob/7b66f4f0a9ec184fdebcccd41533acc728ebe9dc/node/runtime/src/lib.rs#L845-L866)）。
 
 FRAME 存储迁移按以下顺序运行：
 
 1. 如果使用自定义顺序，则使用自定义 `on_runtime_upgrade` 函数。
 1. 系统 `frame_system::on_runtime_upgrade` 函数。
-1. 运行时中定义的所有 `on_runtime_upgrade` 函数，从 `construct_runtime!` 宏中的最后一个调色板开始。
+1. 运行时中定义的所有 `on_runtime_upgrade` 函数，从 `construct_runtime!` 宏中的最后一个pallet开始。
 
 ### 测试迁移
 

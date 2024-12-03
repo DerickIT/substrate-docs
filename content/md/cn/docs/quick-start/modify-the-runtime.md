@@ -9,7 +9,7 @@ keywords:
 
 在此简单演示中，您将执行以下操作：
 
-- 添加一个具有您要使用的功能的调色板。
+- 添加一个具有您要使用的功能的pallet。
 - 更改一些常量值。
 - 更新运行时版本。
 - 重新编译运行时以包含您的更改。
@@ -50,21 +50,21 @@ keywords:
 
    ![节点模板默认版本](/media/images/docs/quickstart-100.png)
 
-## 添加调色板
+## 添加pallet
 
-使用 Substrate 和 FRAME 开始构建的最常见方法是添加调色板，方法是导入现有库中的调色板或创建自己的调色板。
-从头开始创建自己的调色板并不难，但需要更多工作来设计应用程序逻辑、存储要求、错误处理等。
-为了简单起见，让我们通过从现有库中导入一个调色板来添加一个调色板。
+使用 Substrate 和 FRAME 开始构建的最常见方法是添加pallet，方法是导入现有库中的pallet或创建自己的pallet。
+从头开始创建自己的pallet并不难，但需要更多工作来设计应用程序逻辑、存储要求、错误处理等。
+为了简单起见，让我们通过从现有库中导入一个pallet来添加一个pallet。
 
-默认情况下，节点模板不包含 [实用程序调色板](https://paritytech.github.io/substrate/master/pallet_utility/index.html)。
-如果此调色板包含您要使用的函数，则可以将其添加到默认运行时。
+默认情况下，节点模板不包含 [实用程序pallet](https://paritytech.github.io/substrate/master/pallet_utility/index.html)。
+如果此pallet包含您要使用的函数，则可以将其添加到默认运行时。
 
-要添加实用程序调色板：
+要添加实用程序pallet：
 
 1. 在您的计算机上打开第二个终端外壳，并更改到节点模板根目录。
 2. 在代码编辑器中打开运行时清单—`runtime/Cargo.toml`。
 
-3. 找到 `[dependencies]` 部分，并将实用程序调色板添加为依赖项。
+3. 找到 `[dependencies]` 部分，并将实用程序pallet添加为依赖项。
 
    例如，您应该添加类似于以下内容的单行。
 
@@ -72,11 +72,11 @@ keywords:
    pallet-utility = { version = "4.0.0-dev", default-features = false, git = "https://github.com/paritytech/polkadot-sdk.git", branch = "polkadot-vX.Y.Z" }
    ```
 
-   请务必将 `branch = "polkadot-vX.Y.Z"` 替换为用于其他调色板的 Polkadot 分支。
+   请务必将 `branch = "polkadot-vX.Y.Z"` 替换为用于其他pallet的 Polkadot 分支。
 
-   您可以复制任何现有的调色板依赖项作为模型，以确保 `pallet-utility` 依赖项的分支设置与所有其他调色板的分支设置相同。
+   您可以复制任何现有的pallet依赖项作为模型，以确保 `pallet-utility` 依赖项的分支设置与所有其他pallet的分支设置相同。
 
-4. 找到 `[features]` 部分，并将实用程序调色板添加到标准二进制文件的默认功能列表中。
+4. 找到 `[features]` 部分，并将实用程序pallet添加到标准二进制文件的默认功能列表中。
 
    例如：
 
@@ -96,7 +96,7 @@ keywords:
 
 6. 在代码编辑器中打开 `runtime/src/lib.rs` 文件。
 
-7. 添加实用程序调色板的 `Config` 特性的实现。
+7. 添加实用程序pallet的 `Config` 特性的实现。
 
    例如：
 
@@ -109,11 +109,11 @@ keywords:
    }
    ```
 
-   每个调色板都有一个 `Config` 特性，用于它所需的特定参数和类型。
-   您始终可以查看调色板的 Rust 文档以了解有关其配置要求的更多信息。
+   每个pallet都有一个 `Config` 特性，用于它所需的特定参数和类型。
+   您始终可以查看pallet的 Rust 文档以了解有关其配置要求的更多信息。
    例如，您可以查看 [pallet-utility](https://paritytech.github.io/substrate/master/pallet_utility/index.html) 的 Rust 文档。
 
-8. 在 `construct_runtime!` 宏中添加实用程序调色板。
+8. 在 `construct_runtime!` 宏中添加实用程序pallet。
 
    例如：
 
@@ -139,7 +139,7 @@ keywords:
 
 ## 更改常量值
 
-默认情况下，节点模板中的余额调色板定义了一个 `EXISTENTIAL_DEPOSIT` 常量。
+默认情况下，节点模板中的余额pallet定义了一个 `EXISTENTIAL_DEPOSIT` 常量。
 `EXISTENTIAL_DEPOSIT` 表示帐户必须具有的最小余额，才能被视为有效的活动帐户。
 默认情况下，该常量定义为具有 500 值的 128 位无符号整数类型。
 为了简单起见，您将更改此常量的值，从 500 更改为 1000。
@@ -148,7 +148,7 @@ keywords:
 
 1. 在代码编辑器中打开 `runtime/src/lib.rs` 文件。
 
-2. 找到余额调色板的 `EXISTENTIAL_DEPOSIT`。
+2. 找到余额pallet的 `EXISTENTIAL_DEPOSIT`。
 
    ```text
    /// 最低存款。
@@ -240,7 +240,7 @@ keywords:
 
 2. 选择管理**Alice** 帐户。
 
-3. 选择**sudo** 调色板和**sudoUncheckedWeight(call, weight)** 函数。
+3. 选择**sudo** pallet和**sudoUncheckedWeight(call, weight)** 函数。
 4. 选择**system** 和**setCode(code)** 作为使用 Alice 帐户进行调用的方法。
 
 5. 单击**文件上传**，然后选择或拖放您为更新的运行时生成的紧凑压缩 WebAssembly 文件—`node_template_runtime.compact.compressed.wasm`。
@@ -272,12 +272,12 @@ keywords:
    ![更新的运行时版本为 101](/media/images/docs/quickstart-101.png)
 
 3. 单击**开发人员**，然后选择**外部函数**。
-4. 单击**提交以下外部函数**，然后滚动到列表底部，以验证**utility** 调色板是否可用作为选项。
+4. 单击**提交以下外部函数**，然后滚动到列表底部，以验证**utility** pallet是否可用作为选项。
 
-   ![实用程序调色板](/media/images/docs/quickstart-utility-pallet.png)
+   ![实用程序pallet](/media/images/docs/quickstart-utility-pallet.png)
 
 5. 单击**开发人员**，选择**链状态**，然后单击 [常量](https://polkadot.js.org/apps/#/chainstate/constants?rpc=ws://127.0.0.1:9944)。
-6. 选择**balances** 调色板，选择**existentialDeposit**，然后单击**+** 以查询常量值。
+6. 选择**balances** pallet，选择**existentialDeposit**，然后单击**+** 以查询常量值。
 
    ![验证常量值更改](/media/images/docs/quickstart-chain-state.png)
 

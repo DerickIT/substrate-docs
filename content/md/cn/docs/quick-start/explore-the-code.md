@@ -12,7 +12,7 @@ keywords:
 
 节点模板包含一些默认的区块链基本要素，例如点对点网络、简单的共识机制和交易处理。
 节点模板还包含一些用于处理帐户、余额和交易费用以及执行管理操作的基本功能。
-这套核心功能是通过几个预定义的模块（称为**调色板**）提供的，这些模块实现了特定功能。
+这套核心功能是通过几个预定义的模块（称为**pallet**）提供的，这些模块实现了特定功能。
 
 例如，以下核心模块在节点模板中预定义：
 
@@ -20,7 +20,7 @@ keywords:
 - `pallet_transaction_payment` 用于管理执行的交易的交易费用。
 - `pallet_sudo` 用于执行需要管理权限的操作。
 
-节点模板还提供了一个入门 `pallet_template`，它说明了如何在自定义调色板中实现功能。
+节点模板还提供了一个入门 `pallet_template`，它说明了如何在自定义pallet中实现功能。
 
 现在您已经概述了节点模板中包含的功能，让我们更仔细地查看 `substrate-node-template` 目录及其子目录中的代码。
 
@@ -53,7 +53,7 @@ panic = "unwind"
 现在，了解清单在描述每个包的依赖项和其他关键信息方面的重要性就足够了。
 
 如果您打开 `runtime/Cargo.toml` 文件和 `pallets/template/Cargo.toml`，您将看到不同的库和基元作为依赖项，但您会对编译这些包需要什么有一个大致的了解。
-例如，运行时的清单列出了所有调色板（包括 `frame_system` 、 `frame_support` 和前面提到的 `pallet_balances` 、 `pallet_transaction_payment` 和 `pallet_sudo` 模块），这些模块构成了节点模板的默认运行时。
+例如，运行时的清单列出了所有pallet（包括 `frame_system` 、 `frame_support` 和前面提到的 `pallet_balances` 、 `pallet_transaction_payment` 和 `pallet_sudo` 模块），这些模块构成了节点模板的默认运行时。
 
 ## 核心客户端源代码
 
@@ -80,7 +80,7 @@ Substrate 最重要的方面之一是节点由两个主要部分组成：**核�
 ## 默认节点模板运行时
 
 由于 Substrate 为构建区块链提供了一个模块化且灵活的框架，因此您可以更改工作区中的任何包。
-但是，大多数应用程序开发工作都在运行时和用于构建运行时的模块（调色板）中完成。
+但是，大多数应用程序开发工作都在运行时和用于构建运行时的模块（pallet）中完成。
 在开始为自己的项目自定义运行时之前，您应该花一些时间探索默认节点模板中的内容。
 
 ### 默认清单
@@ -95,25 +95,25 @@ pallet-sudo = { version = "4.0.0-dev", default-features = false, git = "https://
 pallet-transaction-payment = { version = "4.0.0-dev", default-features = false, git = "https://github.com/paritytech/polkadot-sdk.git", branch = "polkadot-vX.Y.Z" }
 ```
 
-还有一些对核心包的依赖项，例如 `frame-system` 、 `frame-support` 和 `frame-executive` 。
-您将在 [核心 FRAME 服务](/learn/runtime-development/#core-frame-services) 中详细了解这些核心服务。
-现在，只需注意这些和其他模块是编译节点模板的运行时所必需的。
+还有对核心包的依赖——例如 `frame-system`、`frame-support` 和 `frame-executive`。
+你将在[核心 FRAME 服务](/learn/runtime-development/#core-frame-services)中了解更多关于这些核心服务的信息。
+现在，只需注意这些和其他模块是编译节点模板运行时所必需的。
 
 ### 默认源代码
 
 运行时的主要源代码位于 `runtime/src/lib.rs` 文件中。
-如果您在代码编辑器中打开此文件，一开始可能会觉得很复杂。
-有些细微差别在文档的其他部分有介绍，但本质上，源代码执行以下操作：
+如果你在代码编辑器中打开这个文件，起初可能会觉得很复杂。
+有些细节在文档的其他部分中有介绍，但本质上，源代码执行以下操作：
 
 - 导入 frame_system 和 frame_support 核心服务。
 - 指定运行时的版本信息。
-- 声明要包含的调色板。
-- 声明每个包含的调色板的类型和参数。
-- 为每个包含的调色板设置常量和变量值。
-- 为每个包含的调色板实现 `Config` 特性。
-- 从包含的调色板构建运行时。
-- 为评估调色板性能准备基准测试框架。
-- 实现允许核心客户端调用运行时的接口。
+- 声明要包含的 pallets。
+- 声明每个包含的 pallet 的类型和参数。
+- 为每个包含的 pallet 设置常量和变量值。
+- 为每个包含的 pallet 实现 `Config` trait。
+- 从包含的 pallets 构建运行时。
+- 准备基准测试框架以评估 pallet 性能。
+- 实现使核心客户端能够调用运行时的接口。
 
-您将在 [构建](/build/) 和 [测试](/test/) 部分的主题中详细了解如何构建运行时、定义基准测试和使用运行时接口。
-现在，您只需要对运行时的组成方式以及如何使用 `Config` 特性实现默认调色板有一个大致的了解。
+你将在[构建](/build/)和[测试](/test/)部分的主题中了解更多关于构建运行时、定义基准测试和使用运行时接口的内容。
+现在，你只需要对运行时的组成方式以及如何使用 `Config` trait 实现默认的 pallets 有一个大致的了解。
