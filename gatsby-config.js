@@ -12,7 +12,11 @@ require('dotenv').config({
 const siteMetadata = require('./config/siteMetadata');
 
 module.exports = {
-  siteMetadata,
+  siteMetadata: {
+    ...siteMetadata,
+    siteUrl: 'https://docs.substrate.io',
+    docsUrl: 'https://docs.substrate.io',
+  },
   plugins: [
     'gatsby-plugin-substrate',
     /* Custom ESLint to your Gatsby dev environment  */
@@ -217,7 +221,7 @@ module.exports = {
       resolve: `gatsby-plugin-react-i18next`,
       options: {
         localeJsonSourceName: `locale`, // name given to `gatsby-source-filesystem` plugin.
-        languages: [`cn`],
+        languages: [`cn`,`en`],
         defaultLanguage: `cn`,
         // if you are using Helmet, you must include siteUrl
         siteUrl: siteMetadata.siteUrl,

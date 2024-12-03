@@ -9,7 +9,7 @@
 	],
 	"license": "0BSD",
 	"scripts": {
-		"develop": "gatsby develop -p 8200",
+		"develop": "gatsby develop -H 0.0.0.0  -p 8200",
 		"build": "gatsby build",
 		"serve": "gatsby serve",
 		"serve:fresh": "yarn clean; yarn build; yarn serve",
@@ -21,8 +21,8 @@
 		"lint:fix": "eslint --fix --ext js --ext jsx .",
 		"extract-locales": "yarn run babel --config-file ./babel-extract-locales.config.js -o tmp/chunk.js 'src/**/*.{js,jsx}' && rm -rf tmp",
 		"checklinks": "yarn blc --filter-level=3 -rof --requests=10 --exclude='/crates.io' --exclude='/localhost:8000' --exclude='/localhost:8100' --exclude='/localhost:8300' --exclude='/paritytech.github.io/' --exclude='undefined' http://localhost:9000/quick-start/ | tee checklinks.log",
-    "checklinks-external": "find content/md -name \\*.md -print0 | xargs -0 -n1 markdown-link-check -p -c .github/workflows/mlc_config.json"
-  },
+		"checklinks-external": "find content/md -name \\*.md -print0 | xargs -0 -n1 markdown-link-check -p -c .github/workflows/mlc_config.json"
+	},
 	"dependencies": {
 		"aos": "^2.3.4",
 		"classnames": "^2.3.1",
@@ -43,7 +43,7 @@
 		"gatsby-plugin-sharp": "^3.10.2",
 		"gatsby-plugin-simple-analytics": "^1.0.4",
 		"gatsby-plugin-sitemap": "^3.3.0",
-		"gatsby-plugin-substrate": "./plugins/gatsby-plugin-substrate",
+		"gatsby-plugin-substrate": "file:plugins/gatsby-plugin-substrate",
 		"gatsby-prismjs-dracula": "^0.1.15",
 		"gatsby-remark-attr": "^0.1.0",
 		"gatsby-remark-autolink-headers": "^4.10.0",
